@@ -1,3 +1,68 @@
+/* ===== CODE RAIN CANVAS ===== */
+(function() {
+  const canvas = document.getElementById('code-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const chars = '{}[]()<>/\\;:=+-*&|!?0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ#@$%^~`"\'.const let var function return import export class if else for while async await';
+  const charArr = chars.split('');
+
+  const colors = ['#a855f7', '#22d3ee', '#f472b6', '#4ade80', '#818cf8', '#fb923c'];
+
+  let cols, drops, speeds, colorIdx, fontSize;
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    fontSize = 14;
+    cols = Math.floor(canvas.width / (fontSize * 0.7));
+    drops = Array(cols).fill(0).map(() => Math.random() * -canvas.height / fontSize);
+    speeds = Array(cols).fill(0).map(() => 0.3 + Math.random() * 0.7);
+    colorIdx = Array(cols).fill(0).map(() => Math.floor(Math.random() * colors.length));
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+
+  function draw() {
+    ctx.fillStyle = 'rgba(6, 6, 20, 0.18)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    for (let i = 0; i < cols; i++) {
+      const ch = charArr[Math.floor(Math.random() * charArr.length)];
+      const x = i * fontSize * 0.7;
+      const y = drops[i] * fontSize;
+
+      // Leading character — bright
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = colors[colorIdx[i]];
+      ctx.fillStyle = '#ffffff';
+      ctx.globalAlpha = 0.9;
+      ctx.font = `${fontSize}px monospace`;
+      ctx.fillText(ch, x, y);
+
+      // Trail character — coloured and faded
+      ctx.shadowBlur = 4;
+      ctx.fillStyle = colors[colorIdx[i]];
+      ctx.globalAlpha = 0.35;
+      const trailCh = charArr[Math.floor(Math.random() * charArr.length)];
+      ctx.fillText(trailCh, x, y - fontSize * 1.5);
+
+      ctx.globalAlpha = 1;
+      ctx.shadowBlur = 0;
+
+      drops[i] += speeds[i];
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = Math.random() * -20;
+        colorIdx[i] = Math.floor(Math.random() * colors.length);
+      }
+    }
+  }
+
+  setInterval(draw, 42);
+})();
+
 /* ===== NAVBAR SCROLL ===== */
 const navbar = document.getElementById('navbar');
 
