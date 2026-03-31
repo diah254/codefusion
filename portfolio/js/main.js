@@ -9,16 +9,16 @@
 
   const colors = ['#a855f7', '#22d3ee', '#f472b6', '#4ade80', '#818cf8', '#fb923c'];
 
-  let cols, drops, speeds, colorIdx, fontSize;
+  let rows, drops, speeds, colorIdx, fontSize;
 
   function resize() {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
     fontSize = 14;
-    cols = Math.floor(canvas.width / (fontSize * 0.7));
-    drops = Array(cols).fill(0).map(() => Math.random() * -canvas.height / fontSize);
-    speeds = Array(cols).fill(0).map(() => 0.3 + Math.random() * 0.7);
-    colorIdx = Array(cols).fill(0).map(() => Math.floor(Math.random() * colors.length));
+    rows = Math.floor(canvas.height / (fontSize * 1.5));
+    drops = Array(rows).fill(0).map(() => Math.random() * -canvas.width / (fontSize * 0.7));
+    speeds = Array(rows).fill(0).map(() => 0.3 + Math.random() * 0.7);
+    colorIdx = Array(rows).fill(0).map(() => Math.floor(Math.random() * colors.length));
   }
 
   resize();
@@ -28,10 +28,10 @@
     ctx.fillStyle = 'rgba(6, 6, 20, 0.18)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    for (let i = 0; i < cols; i++) {
+    for (let i = 0; i < rows; i++) {
       const ch = charArr[Math.floor(Math.random() * charArr.length)];
-      const x = i * fontSize * 0.7;
-      const y = drops[i] * fontSize;
+      const x = drops[i] * fontSize * 0.7;
+      const y = i * fontSize * 1.5;
 
       // Leading character — bright
       ctx.shadowBlur = 8;
@@ -46,14 +46,14 @@
       ctx.fillStyle = colors[colorIdx[i]];
       ctx.globalAlpha = 0.35;
       const trailCh = charArr[Math.floor(Math.random() * charArr.length)];
-      ctx.fillText(trailCh, x, y - fontSize * 1.5);
+      ctx.fillText(trailCh, x - fontSize * 0.7, y);
 
       ctx.globalAlpha = 1;
       ctx.shadowBlur = 0;
 
       drops[i] += speeds[i];
 
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      if (drops[i] * fontSize * 0.7 > canvas.width && Math.random() > 0.975) {
         drops[i] = Math.random() * -20;
         colorIdx[i] = Math.floor(Math.random() * colors.length);
       }
@@ -238,3 +238,42 @@ if (contactForm) {
     }, 1000);
   });
 }
+
+/* ===== TYPEWRITER EFFECT ===== */
+(function() {
+  const typewriter = document.getElementById('typewriter');
+  if (!typewriter) return;
+
+  const words = ['Codefusion', 'Digital Dreams', 'Innovation', 'Clean Code'];
+  let wordIdx = 0;
+  let charIdx = 0;
+  let isDeleting = false;
+  let typeSpeed = 150;
+
+  function type() {
+    const currentWord = words[wordIdx];
+
+    if (isDeleting) {
+      typewriter.textContent = currentWord.substring(0, charIdx - 1);
+      charIdx--;
+      typeSpeed = 75;
+    } else {
+      typewriter.textContent = currentWord.substring(0, charIdx + 1);
+      charIdx++;
+      typeSpeed = 150;
+    }
+
+    if (!isDeleting && charIdx === currentWord.length) {
+      isDeleting = true;
+      typeSpeed = 2000; // Pause at the end
+    } else if (isDeleting && charIdx === 0) {
+      isDeleting = false;
+      wordIdx = (wordIdx + 1) % words.length;
+      typeSpeed = 500; // Pause before starting next word
+    }
+
+    setTimeout(type, typeSpeed);
+  }
+
+  type();
+})();
