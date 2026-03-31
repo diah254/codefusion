@@ -228,11 +228,13 @@ img { max-width: 100%; display: block; }
 }
 
 #code-canvas {
+  display: block;
   position: absolute;
-  inset: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
+  pointer-events: none;
 }
 
 .hero-overlay {
@@ -579,6 +581,19 @@ img { max-width: 100%; display: block; }
 .contact-item a, .contact-item span {
   font-size: 0.95rem;
   color: var(--text);
+}
+
+.contact-name-link {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary) !important;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.contact-name-link:hover {
+  color: var(--cyan) !important;
+  text-shadow: 0 0 10px rgba(34,211,238,0.5);
 }
 
 .social-links {
