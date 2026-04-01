@@ -241,23 +241,39 @@ filterBtns.forEach(btn => {
 
 /* ===== CONTACT FORM ===== */
 const contactForm = document.getElementById('contact-form');
-const formSuccess = document.getElementById('form-success');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const btn = contactForm.querySelector('button[type="submit"]');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
+    const btn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
 
-    setTimeout(() => {
-      contactForm.reset();
-      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-      btn.disabled = false;
-      if (formSuccess) {
-        formSuccess.style.display = 'block';
-        setTimeout(() => { formSuccess.style.display = 'none'; }, 4000);
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    btn.disabled = true;
+    if (successMsg) successMsg.style.display = 'none';
+    if (errorMsg) errorMsg.style.display = 'none';
+
+    const data = Object.fromEntries(new FormData(contactForm).entries());
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const json = await res.json();
+      if (res.ok && json.success) {
+        contactForm.reset();
+        if (successMsg) { successMsg.style.display = 'block'; setTimeout(() => { successMsg.style.display = 'none'; }, 6000); }
+      } else {
+        if (errorMsg) { errorMsg.style.display = 'block'; setTimeout(() => { errorMsg.style.display = 'none'; }, 5000); }
       }
-    }, 1000);
+    } catch (_) {
+      if (errorMsg) { errorMsg.style.display = 'block'; setTimeout(() => { errorMsg.style.display = 'none'; }, 5000); }
+    }
+
+    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    btn.disabled = false;
   });
 }
