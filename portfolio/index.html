@@ -193,6 +193,9 @@
           </div>
         </div>
         <form class="contact-form" id="contact-form">
+          <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY" />
+          <input type="hidden" name="subject" value="New message from your Codefusion portfolio" />
+          <input type="hidden" name="from_name" value="Codefusion Portfolio" />
           <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="John Doe" required />
@@ -202,17 +205,22 @@
             <input type="email" id="email" name="email" placeholder="john@example.com" required />
           </div>
           <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Project inquiry" />
+            <label for="inquiry">Subject / Inquiry</label>
+            <input type="text" id="inquiry" name="inquiry" placeholder="e.g. Website design, App development..." />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
             <i class="fas fa-paper-plane"></i> Send Message
           </button>
-          <p class="form-success" id="form-success">Thanks! Your message has been sent.</p>
+          <p class="form-success" id="form-success" style="display:none;">
+            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you within 24 hours.
+          </p>
+          <p class="form-error" id="form-error" style="display:none;">
+            <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again.
+          </p>
         </form>
       </div>
     </div>
