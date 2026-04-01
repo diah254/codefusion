@@ -280,25 +280,6 @@ img { max-width: 100%; display: block; }
   filter: drop-shadow(0 0 18px rgba(168,85,247,0.6));
   animation: gradientShift 4s ease-in-out infinite;
   background-size: 200% auto;
-  min-height: 1.2em;
-  display: inline-block;
-  vertical-align: bottom;
-}
-
-.cursor {
-  display: inline-block;
-  width: 4px;
-  height: 0.8em;
-  background-color: var(--primary);
-  margin-left: 4px;
-  animation: blink 0.7s infinite;
-  vertical-align: middle;
-  box-shadow: 0 0 10px var(--primary);
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
 }
 
 @keyframes gradientShift {
