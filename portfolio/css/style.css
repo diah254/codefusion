@@ -669,6 +669,14 @@ img { max-width: 100%; display: block; }
   margin-top: 12px;
   font-size: 0.9rem;
 }
+.form-error {
+  display: none;
+  text-align: center;
+  color: #f87171;
+  font-weight: 500;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
 
 /* ===== PAGE HEADER ===== */
 .page-header {
