@@ -1,66 +1,89 @@
-/* ===== CODE RAIN CANVAS ===== */
+/* ===== HORIZONTAL CODE RAIN CANVAS ===== */
 (function() {
   const canvas = document.getElementById('code-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  const chars = '{}[]()<>/\\;:=+-*&|!?0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ#@$%^~`"\'.const let var function return import export class if else for while async await';
+  const chars = '{}[]()<>/\\;:=+-*&|!?0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ#@$%^~`"\'.';
   const charArr = chars.split('');
+  const colors = ['#a855f7', '#22d3ee', '#f472b6', '#4ade80', '#818cf8'];
 
-  const colors = ['#a855f7', '#22d3ee', '#f472b6', '#4ade80', '#818cf8', '#fb923c'];
+  const fontSize = 13;
+  let rows, streams;
 
-  let rows, drops, speeds, colorIdx, fontSize;
+  function makeStream(rowIndex) {
+    const goRight = Math.random() > 0.5;
+    return {
+      x: goRight ? Math.random() * -200 : canvas.width + Math.random() * 200,
+      y: rowIndex * fontSize * 1.6 + fontSize,
+      speed: (0.8 + Math.random() * 1.4) * (goRight ? 1 : -1),
+      color: colors[Math.floor(Math.random() * colors.length)],
+      length: Math.floor(6 + Math.random() * 14),
+      chars: Array.from({length: 20}, () => charArr[Math.floor(Math.random() * charArr.length)])
+    };
+  }
 
   function resize() {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
-    fontSize = 14;
-    rows = Math.floor(canvas.height / (fontSize * 1.5));
-    drops = Array(rows).fill(0).map(() => Math.random() * -canvas.width / (fontSize * 0.7));
-    speeds = Array(rows).fill(0).map(() => 0.3 + Math.random() * 0.7);
-    colorIdx = Array(rows).fill(0).map(() => Math.floor(Math.random() * colors.length));
+    rows = Math.floor(canvas.height / (fontSize * 1.6));
+    streams = Array.from({length: rows}, (_, i) => makeStream(i));
   }
 
   resize();
   window.addEventListener('resize', resize);
 
   function draw() {
-    ctx.fillStyle = 'rgba(6, 6, 20, 0.18)';
+    ctx.fillStyle = 'rgba(6, 6, 20, 0.20)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = `${fontSize}px monospace`;
 
-    for (let i = 0; i < rows; i++) {
-      const ch = charArr[Math.floor(Math.random() * charArr.length)];
-      const x = drops[i] * fontSize * 0.7;
-      const y = i * fontSize * 1.5;
+    for (let s of streams) {
+      const goRight = s.speed > 0;
 
-      // Leading character — bright
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = colors[colorIdx[i]];
-      ctx.fillStyle = '#ffffff';
-      ctx.globalAlpha = 0.9;
-      ctx.font = `${fontSize}px monospace`;
-      ctx.fillText(ch, x, y);
+      for (let j = 0; j < s.length; j++) {
+        const offset = goRight ? -j * fontSize * 0.75 : j * fontSize * 0.75;
+        const cx = s.x + offset;
+        if (cx < -fontSize * 2 || cx > canvas.width + fontSize * 2) continue;
 
-      // Trail character — coloured and faded
-      ctx.shadowBlur = 4;
-      ctx.fillStyle = colors[colorIdx[i]];
-      ctx.globalAlpha = 0.35;
-      const trailCh = charArr[Math.floor(Math.random() * charArr.length)];
-      ctx.fillText(trailCh, x - fontSize * 0.7, y);
+        const ch = s.chars[j % s.chars.length];
+        if (j === 0) {
+          // bright leading head
+          ctx.globalAlpha = 0.95;
+          ctx.shadowBlur = 10;
+          ctx.shadowColor = s.color;
+          ctx.fillStyle = '#ffffff';
+        } else {
+          // fading coloured trail
+          ctx.globalAlpha = Math.max(0.05, 0.7 - j / s.length * 0.75);
+          ctx.shadowBlur = 4;
+          ctx.shadowColor = s.color;
+          ctx.fillStyle = s.color;
+        }
+        ctx.fillText(ch, cx, s.y);
+      }
 
       ctx.globalAlpha = 1;
       ctx.shadowBlur = 0;
 
-      drops[i] += speeds[i];
+      // shuffle a random char in the stream
+      if (Math.random() > 0.85) {
+        const ri = Math.floor(Math.random() * s.chars.length);
+        s.chars[ri] = charArr[Math.floor(Math.random() * charArr.length)];
+      }
 
-      if (drops[i] * fontSize * 0.7 > canvas.width && Math.random() > 0.975) {
-        drops[i] = Math.random() * -20;
-        colorIdx[i] = Math.floor(Math.random() * colors.length);
+      s.x += s.speed;
+
+      // reset when fully off screen
+      if ((s.speed > 0 && s.x - s.length * fontSize * 0.75 > canvas.width + 40) ||
+          (s.speed < 0 && s.x + s.length * fontSize * 0.75 < -40)) {
+        const row = streams.indexOf(s);
+        streams[row] = makeStream(row);
       }
     }
   }
 
-  setInterval(draw, 42);
+  setInterval(draw, 38);
 })();
 
 /* ===== NAVBAR SCROLL ===== */
@@ -238,42 +261,3 @@ if (contactForm) {
     }, 1000);
   });
 }
-
-/* ===== TYPEWRITER EFFECT ===== */
-(function() {
-  const typewriter = document.getElementById('typewriter');
-  if (!typewriter) return;
-
-  const words = ['Codefusion', 'Digital Dreams', 'Innovation', 'Clean Code'];
-  let wordIdx = 0;
-  let charIdx = 0;
-  let isDeleting = false;
-  let typeSpeed = 150;
-
-  function type() {
-    const currentWord = words[wordIdx];
-
-    if (isDeleting) {
-      typewriter.textContent = currentWord.substring(0, charIdx - 1);
-      charIdx--;
-      typeSpeed = 75;
-    } else {
-      typewriter.textContent = currentWord.substring(0, charIdx + 1);
-      charIdx++;
-      typeSpeed = 150;
-    }
-
-    if (!isDeleting && charIdx === currentWord.length) {
-      isDeleting = true;
-      typeSpeed = 2000; // Pause at the end
-    } else if (isDeleting && charIdx === 0) {
-      isDeleting = false;
-      wordIdx = (wordIdx + 1) % words.length;
-      typeSpeed = 500; // Pause before starting next word
-    }
-
-    setTimeout(type, typeSpeed);
-  }
-
-  type();
-})();
