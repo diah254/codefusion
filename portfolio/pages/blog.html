@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Codefusion</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <p class="section-label">Thoughts & Insights</p>
+      <h1>The Codefusion Blog</h1>
+    </div>
+  </header>
+
+  <!-- Blog Content -->
+  <section class="all-projects section-sm">
+    <div class="container">
+
+      <!-- Featured Post -->
+      <div class="blog-featured">
+        <div class="blog-img">
+          <img
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80"
+            alt="Building scalable web apps"
+            loading="lazy"
+          />
+          <span class="blog-category">Web Dev</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span><i class="far fa-calendar"></i> April 2026</span>
+            <span><i class="far fa-clock"></i> 5 min read</span>
+            <span><i class="far fa-user"></i> Diah</span>
+          </div>
+          <h2><a href="#">Building Scalable Web Apps from Scratch</a></h2>
+          <p>A practical guide to architecting web applications that grow with your users — from monolith to microservices. Discover the patterns, tools, and mindset shifts that separate hobby projects from production-ready systems.</p>
+          <a href="#" class="blog-read-more" style="margin-top:8px;">Read full article <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- All Posts -->
+      <h3 class="blog-section-title">All Posts</h3>
+      <div class="blog-grid">
+
+        <article class="blog-card">
+          <div class="blog-img">
+            <img
+              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80"
+              alt="Mobile phone app"
+              loading="lazy"
+            />
+            <span class="blog-category">Mobile</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> March 2026</span>
+              <span><i class="far fa-clock"></i> 4 min read</span>
+            </div>
+            <h3><a href="#">Why Mobile-First Design Wins Every Time</a></h3>
+            <p>Over 60% of web traffic comes from mobile. Here's why designing for phones first is no longer optional — and how to do it right.</p>
+            <a href="#" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-img">
+            <img
+              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80"
+              alt="Startup and business planning"
+              loading="lazy"
+            />
+            <span class="blog-category">Startup</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> Feb 2026</span>
+              <span><i class="far fa-clock"></i> 7 min read</span>
+            </div>
+            <h3><a href="#">How I Founded Codefusion in 2024</a></h3>
+            <p>The real story behind starting a tech company — the struggles, surprises, and lessons that shaped everything we do today.</p>
+            <a href="#" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-img">
+            <img
+              src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&q=80"
+              alt="REST vs GraphQL API comparison"
+              loading="lazy"
+            />
+            <span class="blog-category">Backend</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> Jan 2026</span>
+              <span><i class="far fa-clock"></i> 6 min read</span>
+            </div>
+            <h3><a href="#">REST vs GraphQL: Which API Should You Use?</a></h3>
+            <p>Breaking down the pros, cons, and real-world use cases of REST and GraphQL so you can choose the right tool for your project.</p>
+            <a href="#" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-img">
+            <img
+              src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80"
+              alt="UI/UX design in Figma"
+              loading="lazy"
+            />
+            <span class="blog-category">Design</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> Dec 2025</span>
+              <span><i class="far fa-clock"></i> 3 min read</span>
+            </div>
+            <h3><a href="#">UI/UX Principles That Drive Real Results</a></h3>
+            <p>Good design is invisible. These core principles will help you create interfaces that users love without them knowing why.</p>
+            <a href="#" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-img">
+            <img
+              src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80"
+              alt="AI tools for developers"
+              loading="lazy"
+            />
+            <span class="blog-category">AI & Tools</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> Nov 2025</span>
+              <span><i class="far fa-clock"></i> 4 min read</span>
+            </div>
+            <h3><a href="#">Top 5 AI Tools Every Developer Should Know</a></h3>
+            <p>From code completion to automated testing — these AI-powered tools are changing how developers work and shipping quality faster.</p>
+            <a href="#" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-img">
+            <img
+              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+              alt="Cloud infrastructure and servers"
+              loading="lazy"
+            />
+            <span class="blog-category">DevOps</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> Oct 2025</span>
+              <span><i class="far fa-clock"></i> 5 min read</span>
+            </div>
+            <h3><a href="#">Deploying to the Cloud: A Beginner's Guide</a></h3>
+            <p>AWS, GCP, or Azure? Containers or serverless? This guide cuts through the jargon and gets your app live in under an hour.</p>
+            <a href="#" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
+      <p>&copy; 2026 Codefusion. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
