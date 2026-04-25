@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Codefusion</title>
+  <link rel="stylesheet" href="../css/style.css?v=3" />
+  <link rel="stylesheet" href="../css/responsive.css?v=3" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <p class="section-label">My work</p>
+      <h1>All Projects</h1>
+    </div>
+  </header>
+
+  <!-- Filter Bar -->
+  <section class="filter-bar section-sm">
+    <div class="container">
+      <div class="filter-btns">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web App</button>
+        <button class="filter-btn" data-filter="api">API</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="all-projects section-sm">
+    <div class="container">
+      <div class="projects-grid all-grid" id="projects-grid">
+
+        <!-- Web App — sign-in / dashboard screenshot -->
+        <div class="project-card" data-category="web">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80"
+              alt="Web dashboard interface"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">Live Demo</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web App</span>
+            <h3>Synapse Dashboard</h3>
+            <p>A modern web application built with React and Node.js, featuring real-time updates and a clean, responsive UI.</p>
+            <div class="tech-stack">
+              <span>React</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-icon" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="link-icon" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- REST API — code / terminal illustration -->
+        <div class="project-card" data-category="api">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=700&q=80"
+              alt="REST API code on screen"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">View Docs</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">API</span>
+            <h3>AuthFlow API</h3>
+            <p>RESTful API service with JWT authentication, rate limiting, and Swagger documentation.</p>
+            <div class="tech-stack">
+              <span>Node.js</span><span>Express</span><span>PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
+              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile App — phone screen illustration -->
+        <div class="project-card" data-category="mobile">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=700&q=80"
+              alt="Mobile app on smartphone screen"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">Live Demo</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Mobile</span>
+            <h3>PocketConnect</h3>
+            <p>Cross-platform mobile app with offline support and push notifications for iOS and Android.</p>
+            <div class="tech-stack">
+              <span>React Native</span><span>Firebase</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
+              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- UI/UX Design — Figma / design system illustration -->
+        <div class="project-card" data-category="design">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=700&q=80"
+              alt="UI/UX design system in Figma"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">View Design</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Design</span>
+            <h3>FinDesign System</h3>
+            <p>Full UI/UX design system including components, patterns, and a style guide for a fintech product.</p>
+            <div class="tech-stack">
+              <span>Figma</span><span>Design System</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
+              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- E-commerce Web App — online shop / product page -->
+        <div class="project-card" data-category="web">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80"
+              alt="E-commerce product page"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">Live Demo</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web App</span>
+            <h3>ShopHub Store</h3>
+            <p>E-commerce platform with payment integration, product management, and admin dashboard.</p>
+            <div class="tech-stack">
+              <span>Next.js</span><span>Stripe</span><span>Prisma</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
+              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- GraphQL API — server / data centre illustration -->
+        <div class="project-card" data-category="api">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=700&q=80"
+              alt="GraphQL server and data infrastructure"
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">View Docs</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">API</span>
+            <h3>GraphCMS API</h3>
+            <p>GraphQL API for a content management system with subscription-based real-time updates.</p>
+            <div class="tech-stack">
+              <span>GraphQL</span><span>Apollo</span><span>Redis</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
+              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
+      <p>&copy; 2026 Codefusion. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
