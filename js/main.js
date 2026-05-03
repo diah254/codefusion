@@ -86,6 +86,19 @@
   setInterval(draw, 38);
 })();
 
+/* ===== ACTIVE NAV HIGHLIGHT ===== */
+(function() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const links = document.querySelectorAll('.nav-links a');
+  links.forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop().split('#')[0] || 'index.html';
+    link.classList.remove('active');
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+  });
+})();
+
 /* ===== NAVBAR SCROLL ===== */
 const navbar = document.getElementById('navbar');
 
