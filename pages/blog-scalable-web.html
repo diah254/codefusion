@@ -7,8 +7,16 @@
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="stylesheet" href="../css/responsive.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    .article-hero { background: linear-gradient(135deg,#0EA5E9,#6366f1); color:#fff; padding:80px 0 48px; }
+    .article-hero {
+      position: relative;
+      color: #fff;
+      padding: 100px 0 56px;
+      background: url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1200&q=80') center/cover no-repeat;
+    }
+    .article-hero::before { content:''; position:absolute; inset:0; background:rgba(10,20,40,0.68); }
+    .article-hero .container { position:relative; z-index:1; }
     .article-hero .section-label { color:rgba(255,255,255,0.75); }
     .article-hero h1 { font-size:clamp(1.6rem,4vw,2.4rem); margin:12px 0 18px; line-height:1.25; }
     .article-meta { display:flex; gap:16px; flex-wrap:wrap; color:rgba(255,255,255,0.8); font-size:0.88rem; }
@@ -21,17 +29,19 @@
   </style>
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="projects.html"><i class="fas fa-folder"></i> Projects</a></li>
-        <li><a href="blog.html" class="active"><i class="fas fa-pen"></i> Blog</a></li>
-        <li><a href="../index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
+        <li><a href="projects.html"><i class="fas fa-folder-open"></i> PROJECTS</a></li>
+        <li><a href="blog.html" class="active"><i class="fas fa-pen-nib"></i> BLOG</a></li>
+        <li><a href="../index.html#contact"><i class="fas fa-phone-alt"></i> CONTACT</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -48,21 +58,15 @@
 
   <div class="article-body">
     <a href="blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-
     <p>Every developer dreams of building something that scales. But most tutorials skip the hard part — what happens when your hobby project suddenly gets real users? In this post I'm going to walk through the decisions, patterns, and tools that have helped me take apps from a single server to systems that handle thousands of concurrent users.</p>
-
     <h2>Start with a monolith — seriously</h2>
     <p>Microservices are trending, but starting with a monolith is almost always the right call. A well-structured monolith is easier to develop, debug, and deploy. You can always extract services later when you have real bottlenecks to justify the complexity. At Codefusion, every project starts as a single, modular codebase.</p>
-
     <h2>Design your database for tomorrow</h2>
     <p>One of the most painful refactors you can face is changing your data model once users have data in your system. Spend extra time on your schema upfront. Use proper indexing, normalise where it makes sense, and think about read vs. write patterns early. PostgreSQL is my go-to — it's battle-tested, powerful, and scales well with connection pooling via PgBouncer.</p>
-
     <h2>Cache aggressively, invalidate carefully</h2>
     <p>Caching is the fastest way to make an app feel blazing fast. Redis is great for session storage, rate limiting, and caching expensive query results. The tricky part is cache invalidation — be deliberate about when and how you clear stale data. A stale cache is worse than no cache because it silently serves wrong data to users.</p>
-
     <h2>Horizontal scaling &gt; vertical scaling</h2>
     <p>At some point, throwing more RAM at your server stops working. Design your app to be stateless so you can run multiple instances behind a load balancer. Store sessions in Redis, not in memory. Use environment variables for config. These habits make scaling horizontally nearly effortless.</p>
-
     <p>Scalability is less about clever architecture and more about consistent, disciplined engineering. Start simple, measure often, and only add complexity when the data tells you to.</p>
   </div>
 

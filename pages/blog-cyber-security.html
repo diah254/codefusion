@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>How I Founded Codefusion | Codefusion Blog</title>
+  <title>Cyber Security Basics | Codefusion Blog</title>
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="stylesheet" href="../css/responsive.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
@@ -13,9 +13,9 @@
       position: relative;
       color: #fff;
       padding: 100px 0 56px;
-      background: url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&q=80') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&q=80') center/cover no-repeat;
     }
-    .article-hero::before { content:''; position:absolute; inset:0; background:rgba(10,20,40,0.68); }
+    .article-hero::before { content:''; position:absolute; inset:0; background:rgba(10,20,40,0.72); }
     .article-hero .container { position:relative; z-index:1; }
     .article-hero .section-label { color:rgba(255,255,255,0.75); }
     .article-hero h1 { font-size:clamp(1.6rem,4vw,2.4rem); margin:12px 0 18px; line-height:1.25; }
@@ -47,10 +47,10 @@
 
   <section class="article-hero">
     <div class="container">
-      <p class="section-label">Startup &bull; Feb 2026</p>
-      <h1>How I Founded Codefusion in 2024</h1>
+      <p class="section-label">Cyber Security &bull; May 2026</p>
+      <h1>Cyber Security Basics Every Developer Must Know</h1>
       <div class="article-meta">
-        <span><i class="far fa-clock"></i> 7 min read</span>
+        <span><i class="far fa-clock"></i> 6 min read</span>
         <span><i class="far fa-user"></i> Diah M</span>
       </div>
     </div>
@@ -58,16 +58,24 @@
 
   <div class="article-body">
     <a href="blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-    <p>Starting a company is rarely the heroic leap people imagine it to be. For me, Codefusion began with a simple observation: too many businesses around me had great ideas but no reliable way to bring them to life digitally. I knew I could help — and in 2024, I decided to stop waiting for the right time and just start.</p>
-    <h2>The idea</h2>
-    <p>Codefusion was born from my passion for building things that work beautifully. I wanted to create a studio that combined solid engineering with thoughtful design — a place where clients weren't just getting code, but getting real solutions. The name itself reflects the mission: fusing different technologies, skills, and ideas into something cohesive and powerful.</p>
-    <h2>The hardest part: starting</h2>
-    <p>The first few weeks were the hardest. No clients, no team, just me, a laptop, and a lot of self-doubt. I had to learn things no tutorial teaches — how to price my work, how to talk to clients, how to manage my time without a boss setting deadlines. These were lessons I could only learn by doing.</p>
-    <h2>First projects</h2>
-    <p>My first clients came through word of mouth — friends who needed websites, small businesses that needed apps. I under-charged at first (classic mistake), but those early projects built my portfolio, sharpened my skills, and taught me what clients actually need vs. what they say they need. Every project since has been a lesson.</p>
-    <h2>Where Codefusion is today</h2>
-    <p>Today Codefusion is growing steadily. I work on web development, mobile apps, UI/UX design, and cyber security projects. The journey has been challenging and incredibly rewarding. If you're thinking of starting something, my advice is this: start small, stay consistent, and never stop learning.</p>
-    <p>The best time to start was yesterday. The second best time is right now.</p>
+    <p>Security is not a feature you bolt on at the end of a project — it's a mindset you adopt from day one. As both a developer and a cyber security analyst, I've seen firsthand how small oversights can open massive vulnerabilities. Here are the fundamentals every developer needs to understand to build safer software.</p>
+
+    <h2>Never trust user input</h2>
+    <p>This is rule number one. Every piece of data coming from a user — form fields, URL parameters, headers, cookies — should be treated as potentially malicious until proven otherwise. Validate and sanitise all inputs on the server side, always. SQL injection and cross-site scripting (XSS) attacks are still among the most common vulnerabilities, and both are entirely preventable with proper input handling.</p>
+
+    <h2>Use HTTPS everywhere</h2>
+    <p>Transmitting data over plain HTTP is like sending a postcard — anyone between you and the recipient can read it. HTTPS encrypts the connection using TLS, protecting your users' data in transit. With free certificates available via Let's Encrypt, there's no excuse not to use HTTPS on every project, even in development.</p>
+
+    <h2>Authentication vs. authorisation</h2>
+    <p>These two concepts are often confused but critically different. Authentication is verifying who someone is — checking their password or token. Authorisation is verifying what they're allowed to do — checking their permissions. Mixing these up leads to serious access control bugs. Always check both: confirm the user is logged in AND confirm they have permission to access the requested resource.</p>
+
+    <h2>Keep dependencies updated</h2>
+    <p>Outdated packages are one of the most overlooked attack vectors. Attackers actively scan for applications running known vulnerable library versions. Run dependency audits regularly and update promptly when security patches are released. Tools like <code>npm audit</code> make this easy — there's no reason to skip it.</p>
+
+    <h2>Threat modelling</h2>
+    <p>Before you write a single line of code for a new feature, ask: what could go wrong? Who might try to misuse this? What data is at risk? This process — threat modelling — helps you identify security issues during design rather than after a breach. It doesn't have to be complex; even 15 minutes of structured thinking can prevent serious vulnerabilities.</p>
+
+    <p>Security is a shared responsibility. Developers who understand the basics of cyber security write better, safer code — and give their users the protection they deserve. Start with these fundamentals and build from there.</p>
   </div>
 
   <footer class="footer">
