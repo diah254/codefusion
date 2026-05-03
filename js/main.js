@@ -91,8 +91,10 @@
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const links = document.querySelectorAll('.nav-links a');
   links.forEach(link => {
-    const linkPage = link.getAttribute('href').split('/').pop().split('#')[0] || 'index.html';
+    const href = link.getAttribute('href');
     link.classList.remove('active');
+    if (href.startsWith('#')) return;
+    const linkPage = href.split('/').pop().split('#')[0] || 'index.html';
     if (linkPage === currentPage) {
       link.classList.add('active');
     }
