@@ -629,34 +629,31 @@ img { max-width: 100%; display: block; }
   gap: 16px;
   margin-bottom: 28px;
 }
-.contact-item i {
-  width: 48px; height: 48px;
-  background: var(--primary);
-  color: white;
+.contact-icon-wrap {
+  width: 52px; height: 52px;
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
   flex-shrink: 0;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.contact-item i:hover { transform: scale(1.08); }
+.contact-icon-wrap:hover { transform: scale(1.08); }
 
-/* Gmail — official red */
+/* Gmail — white background to show real multicolor logo */
 .icon-gmail {
-  background: linear-gradient(135deg, #EA4335 0%, #c5221f 100%) !important;
-  box-shadow: 0 4px 14px rgba(234, 67, 53, 0.4);
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(234, 67, 53, 0.2);
+  border: 1.5px solid #f1f1f1;
 }
 /* WhatsApp — official green */
 .icon-whatsapp {
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
-  font-size: 1.4rem !important;
 }
 /* Clock */
 .icon-clock {
-  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
   box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
 }
 .contact-item h4 {
@@ -705,13 +702,14 @@ img { max-width: 100%; display: block; }
 }
 .social-btn:hover { transform: translateY(-4px) scale(1.08); }
 
-/* Gmail social button */
+/* Gmail social button — white bg to show real colors */
 .social-btn-gmail {
-  background: linear-gradient(135deg, #EA4335 0%, #c5221f 100%);
-  box-shadow: 0 4px 14px rgba(234, 67, 53, 0.45);
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(234, 67, 53, 0.25);
+  border: 1.5px solid #f1f1f1;
 }
 .social-btn-gmail:hover {
-  box-shadow: 0 6px 20px rgba(234, 67, 53, 0.6);
+  box-shadow: 0 6px 20px rgba(234, 67, 53, 0.4);
 }
 
 /* WhatsApp social button */
