@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deploying to the Cloud | Codefusion Blog</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    .article-hero { background: linear-gradient(135deg,#0EA5E9,#22c55e); color:#fff; padding:80px 0 48px; }
+    .article-hero .section-label { color:rgba(255,255,255,0.75); }
+    .article-hero h1 { font-size:clamp(1.6rem,4vw,2.4rem); margin:12px 0 18px; line-height:1.25; }
+    .article-meta { display:flex; gap:16px; flex-wrap:wrap; color:rgba(255,255,255,0.8); font-size:0.88rem; }
+    .article-meta span { display:flex; align-items:center; gap:6px; }
+    .article-body { max-width:740px; margin:0 auto; padding:48px 20px 64px; }
+    .article-body p { font-size:1.05rem; line-height:1.85; color:#374151; margin-bottom:20px; }
+    .article-body h2 { font-size:1.3rem; font-weight:700; color:#0f172a; margin:32px 0 12px; }
+    .back-link { display:inline-flex; align-items:center; gap:8px; color:#0EA5E9; font-weight:600; text-decoration:none; margin-bottom:32px; font-size:0.95rem; }
+    .back-link:hover { gap:12px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="projects.html"><i class="fas fa-folder"></i> Projects</a></li>
+        <li><a href="blog.html" class="active"><i class="fas fa-pen"></i> Blog</a></li>
+        <li><a href="../index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <p class="section-label">DevOps &bull; Oct 2025</p>
+      <h1>Deploying to the Cloud: A Beginner's Guide</h1>
+      <div class="article-meta">
+        <span><i class="far fa-clock"></i> 5 min read</span>
+        <span><i class="far fa-user"></i> Diah M</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="article-body">
+    <a href="blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+
+    <p>Getting your app running locally is satisfying. Getting it live on the internet so real people can use it is even better. Cloud deployment can feel intimidating at first, but the fundamentals are simpler than most tutorials make them seem.</p>
+
+    <h2>Choosing a cloud provider</h2>
+    <p>The big three are AWS, Google Cloud, and Azure. For most small projects and beginners, I recommend starting with a simpler platform — Render, Railway, or Fly.io are much easier to get started with and handle a lot of the infrastructure complexity for you. Once you've deployed a few apps, the big cloud providers will feel less overwhelming.</p>
+
+    <h2>Containers make deployment consistent</h2>
+    <p>Docker lets you package your app and all its dependencies into a container that runs the same way everywhere — on your laptop, on a test server, and in production. Learning Docker early will save you from the classic "it works on my machine" problem. Start with a simple Dockerfile and build from there.</p>
+
+    <h2>Environment variables for secrets</h2>
+    <p>Never hardcode API keys, database passwords, or secret tokens in your code. Use environment variables and your cloud platform's secrets manager. This is both a security practice and a convenience — you can use different values in development and production without changing your code.</p>
+
+    <h2>Set up health checks and monitoring</h2>
+    <p>Once your app is live, you need to know when it goes down — before your users tell you. Most cloud platforms let you configure health check endpoints. Pair that with a free monitoring tool like UptimeRobot and you'll get alerted the moment something breaks.</p>
+
+    <p>Cloud deployment gets easier every year. The tools are more beginner-friendly than ever, and the cost of getting started is practically zero. Don't let fear of the unknown keep your app running only on localhost.</p>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
+      <p>&copy; 2026 Codefusion. All rights reserved.</p>
+      <p class="footer-made">made with 🩵 by Diah M</p>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
