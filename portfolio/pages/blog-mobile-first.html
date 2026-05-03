@@ -7,8 +7,16 @@
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="stylesheet" href="../css/responsive.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    .article-hero { background: linear-gradient(135deg,#0EA5E9,#06b6d4); color:#fff; padding:80px 0 48px; }
+    .article-hero {
+      position: relative;
+      color: #fff;
+      padding: 100px 0 56px;
+      background: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80') center/cover no-repeat;
+    }
+    .article-hero::before { content:''; position:absolute; inset:0; background:rgba(10,20,40,0.68); }
+    .article-hero .container { position:relative; z-index:1; }
     .article-hero .section-label { color:rgba(255,255,255,0.75); }
     .article-hero h1 { font-size:clamp(1.6rem,4vw,2.4rem); margin:12px 0 18px; line-height:1.25; }
     .article-meta { display:flex; gap:16px; flex-wrap:wrap; color:rgba(255,255,255,0.8); font-size:0.88rem; }
@@ -21,17 +29,19 @@
   </style>
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="projects.html"><i class="fas fa-folder"></i> Projects</a></li>
-        <li><a href="blog.html" class="active"><i class="fas fa-pen"></i> Blog</a></li>
-        <li><a href="../index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
+        <li><a href="projects.html"><i class="fas fa-folder-open"></i> PROJECTS</a></li>
+        <li><a href="blog.html" class="active"><i class="fas fa-pen-nib"></i> BLOG</a></li>
+        <li><a href="../index.html#contact"><i class="fas fa-phone-alt"></i> CONTACT</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -48,21 +58,15 @@
 
   <div class="article-body">
     <a href="blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-
     <p>Over 60% of all web traffic now comes from mobile devices. Yet so many websites still feel like they were designed on a big monitor and then squished onto a small screen as an afterthought. Mobile-first is not just a design trend — it's how you reach real people.</p>
-
     <h2>What mobile-first actually means</h2>
     <p>Mobile-first means you design and code for the smallest screen first, then progressively enhance the layout for larger screens. In CSS, that means writing your base styles for mobile and using <code>min-width</code> media queries to add complexity as the screen grows — not the other way around.</p>
-
     <h2>Constraints force better decisions</h2>
     <p>When you only have 360px of width to work with, you can't hide behind fancy sidebars or complex layouts. You're forced to prioritise — what does the user absolutely need to see first? That constraint almost always produces a cleaner, clearer experience that works beautifully on desktop too.</p>
-
     <h2>Performance is a mobile feature</h2>
     <p>Mobile users are often on slower connections. Optimising images, reducing JavaScript bundle size, and lazy-loading content aren't optional extras — they're core to the experience. A site that loads in 2 seconds on mobile will feel instant on desktop.</p>
-
     <h2>Touch targets matter</h2>
     <p>Buttons, links, and interactive elements need to be at least 44×44px to be comfortably tappable. Tiny touch targets frustrate users and drive them away. At Codefusion, we test every interface on a real phone before considering it done.</p>
-
     <p>Designing mobile-first is ultimately designing for humans first. It makes you focus on what matters and discard what doesn't — and that's always good design.</p>
   </div>
 

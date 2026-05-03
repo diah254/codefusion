@@ -7,8 +7,16 @@
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="stylesheet" href="../css/responsive.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    .article-hero { background: linear-gradient(135deg,#22c55e,#0EA5E9); color:#fff; padding:80px 0 48px; }
+    .article-hero {
+      position: relative;
+      color: #fff;
+      padding: 100px 0 56px;
+      background: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&q=80') center/cover no-repeat;
+    }
+    .article-hero::before { content:''; position:absolute; inset:0; background:rgba(10,20,40,0.68); }
+    .article-hero .container { position:relative; z-index:1; }
     .article-hero .section-label { color:rgba(255,255,255,0.75); }
     .article-hero h1 { font-size:clamp(1.6rem,4vw,2.4rem); margin:12px 0 18px; line-height:1.25; }
     .article-meta { display:flex; gap:16px; flex-wrap:wrap; color:rgba(255,255,255,0.8); font-size:0.88rem; }
@@ -21,17 +29,19 @@
   </style>
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="projects.html"><i class="fas fa-folder"></i> Projects</a></li>
-        <li><a href="blog.html" class="active"><i class="fas fa-pen"></i> Blog</a></li>
-        <li><a href="../index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
+        <li><a href="projects.html"><i class="fas fa-folder-open"></i> PROJECTS</a></li>
+        <li><a href="blog.html" class="active"><i class="fas fa-pen-nib"></i> BLOG</a></li>
+        <li><a href="../index.html#contact"><i class="fas fa-phone-alt"></i> CONTACT</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -48,21 +58,15 @@
 
   <div class="article-body">
     <a href="blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-
     <p>One of the most common debates in backend development right now is REST vs GraphQL. Both are ways to build APIs, and both have strong communities. But they solve different problems — and picking the wrong one can slow you down significantly.</p>
-
     <h2>What is REST?</h2>
     <p>REST (Representational State Transfer) is the classic approach. Each resource has its own URL, and you use standard HTTP verbs (GET, POST, PUT, DELETE) to interact with it. It's straightforward, widely understood, and works great for most applications. If you're building a simple CRUD app or a public API, REST is usually the right call.</p>
-
     <h2>What is GraphQL?</h2>
     <p>GraphQL lets clients request exactly the data they need — nothing more, nothing less — in a single query. This is especially powerful when you have complex, interconnected data or multiple client types (web, mobile, third-party) each needing slightly different data shapes. Facebook invented it to solve exactly these problems at scale.</p>
-
     <h2>When to choose REST</h2>
     <p>Choose REST when your API is simple, when you want easy caching (REST maps naturally to HTTP caching), when your team is familiar with it, or when you're exposing a public API. REST's predictability and simplicity are genuine strengths you shouldn't underestimate.</p>
-
     <h2>When to choose GraphQL</h2>
     <p>Choose GraphQL when your frontend needs vary significantly (mobile needs less data than web), when you're dealing with deeply nested or relational data, or when you want to reduce the number of round trips to the server. GraphQL shines in complex product apps where the data requirements evolve rapidly.</p>
-
     <p>The honest answer? For most projects, REST is perfectly fine. Only reach for GraphQL when you feel the specific pain points it solves. Don't add complexity you don't need yet.</p>
   </div>
 

@@ -7,8 +7,16 @@
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="stylesheet" href="../css/responsive.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    .article-hero { background: linear-gradient(135deg,#0f172a,#1e40af); color:#fff; padding:80px 0 48px; }
+    .article-hero {
+      position: relative;
+      color: #fff;
+      padding: 100px 0 56px;
+      background: url('https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80') center/cover no-repeat;
+    }
+    .article-hero::before { content:''; position:absolute; inset:0; background:rgba(10,20,40,0.68); }
+    .article-hero .container { position:relative; z-index:1; }
     .article-hero .section-label { color:rgba(255,255,255,0.75); }
     .article-hero h1 { font-size:clamp(1.6rem,4vw,2.4rem); margin:12px 0 18px; line-height:1.25; }
     .article-meta { display:flex; gap:16px; flex-wrap:wrap; color:rgba(255,255,255,0.8); font-size:0.88rem; }
@@ -21,17 +29,19 @@
   </style>
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="projects.html"><i class="fas fa-folder"></i> Projects</a></li>
-        <li><a href="blog.html" class="active"><i class="fas fa-pen"></i> Blog</a></li>
-        <li><a href="../index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
+        <li><a href="projects.html"><i class="fas fa-folder-open"></i> PROJECTS</a></li>
+        <li><a href="blog.html" class="active"><i class="fas fa-pen-nib"></i> BLOG</a></li>
+        <li><a href="../index.html#contact"><i class="fas fa-phone-alt"></i> CONTACT</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -48,24 +58,17 @@
 
   <div class="article-body">
     <a href="blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-
     <p>AI is changing how developers work — not replacing us, but making us dramatically faster and more capable. These are the five AI tools I use regularly and recommend to anyone building software today.</p>
-
     <h2>1. GitHub Copilot</h2>
     <p>Copilot integrates directly into your editor and suggests code completions, entire functions, and even tests as you type. It's not always right, but it eliminates a huge amount of boilerplate and speeds up the "just get it working" phase significantly. I use it every single day.</p>
-
     <h2>2. ChatGPT / Claude</h2>
     <p>Large language models are like having a senior developer you can ask anything, any time. Great for explaining error messages, brainstorming architecture, reviewing code logic, and drafting documentation. The key is learning to write good prompts — specificity gets you much better answers.</p>
-
     <h2>3. Cursor</h2>
     <p>Cursor is an AI-first code editor built on VS Code. It can understand your entire codebase, not just the current file. You can ask it to refactor a module, write tests for a function, or explain a complex piece of code — all in natural language. It's genuinely impressive for large codebases.</p>
-
     <h2>4. Tabnine</h2>
     <p>A privacy-focused alternative to Copilot that can run locally on your machine. Great for teams working on sensitive or proprietary code who can't send code to a third-party API. The suggestions are solid and it integrates with most major editors.</p>
-
     <h2>5. Warp Terminal</h2>
     <p>Warp is an AI-powered terminal that lets you type natural language to generate shell commands, explains what commands do, and keeps a history of your sessions in a readable way. It sounds gimmicky but genuinely reduces the time I spend looking up CLI syntax.</p>
-
     <p>AI tools won't write your whole app for you — yet. But they will make you 2–3x more productive if you learn to use them well. That's a competitive advantage worth taking seriously.</p>
   </div>
 
