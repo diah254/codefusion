@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile-First Design | Codefusion Blog</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    .article-hero { background: linear-gradient(135deg,#0EA5E9,#06b6d4); color:#fff; padding:80px 0 48px; }
+    .article-hero .section-label { color:rgba(255,255,255,0.75); }
+    .article-hero h1 { font-size:clamp(1.6rem,4vw,2.4rem); margin:12px 0 18px; line-height:1.25; }
+    .article-meta { display:flex; gap:16px; flex-wrap:wrap; color:rgba(255,255,255,0.8); font-size:0.88rem; }
+    .article-meta span { display:flex; align-items:center; gap:6px; }
+    .article-body { max-width:740px; margin:0 auto; padding:48px 20px 64px; }
+    .article-body p { font-size:1.05rem; line-height:1.85; color:#374151; margin-bottom:20px; }
+    .article-body h2 { font-size:1.3rem; font-weight:700; color:#0f172a; margin:32px 0 12px; }
+    .back-link { display:inline-flex; align-items:center; gap:8px; color:#0EA5E9; font-weight:600; text-decoration:none; margin-bottom:32px; font-size:0.95rem; }
+    .back-link:hover { gap:12px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="projects.html"><i class="fas fa-folder"></i> Projects</a></li>
+        <li><a href="blog.html" class="active"><i class="fas fa-pen"></i> Blog</a></li>
+        <li><a href="../index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <p class="section-label">Mobile &bull; March 2026</p>
+      <h1>Why Mobile-First Design Wins Every Time</h1>
+      <div class="article-meta">
+        <span><i class="far fa-clock"></i> 4 min read</span>
+        <span><i class="far fa-user"></i> Diah M</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="article-body">
+    <a href="blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+
+    <p>Over 60% of all web traffic now comes from mobile devices. Yet so many websites still feel like they were designed on a big monitor and then squished onto a small screen as an afterthought. Mobile-first is not just a design trend — it's how you reach real people.</p>
+
+    <h2>What mobile-first actually means</h2>
+    <p>Mobile-first means you design and code for the smallest screen first, then progressively enhance the layout for larger screens. In CSS, that means writing your base styles for mobile and using <code>min-width</code> media queries to add complexity as the screen grows — not the other way around.</p>
+
+    <h2>Constraints force better decisions</h2>
+    <p>When you only have 360px of width to work with, you can't hide behind fancy sidebars or complex layouts. You're forced to prioritise — what does the user absolutely need to see first? That constraint almost always produces a cleaner, clearer experience that works beautifully on desktop too.</p>
+
+    <h2>Performance is a mobile feature</h2>
+    <p>Mobile users are often on slower connections. Optimising images, reducing JavaScript bundle size, and lazy-loading content aren't optional extras — they're core to the experience. A site that loads in 2 seconds on mobile will feel instant on desktop.</p>
+
+    <h2>Touch targets matter</h2>
+    <p>Buttons, links, and interactive elements need to be at least 44×44px to be comfortably tappable. Tiny touch targets frustrate users and drive them away. At Codefusion, we test every interface on a real phone before considering it done.</p>
+
+    <p>Designing mobile-first is ultimately designing for humans first. It makes you focus on what matters and discard what doesn't — and that's always good design.</p>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
+      <p>&copy; 2026 Codefusion. All rights reserved.</p>
+      <p class="footer-made">made with 🩵 by Diah M</p>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

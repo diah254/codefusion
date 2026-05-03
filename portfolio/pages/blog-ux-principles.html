@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UI/UX Principles | Codefusion Blog</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/responsive.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    .article-hero { background: linear-gradient(135deg,#a855f7,#ec4899); color:#fff; padding:80px 0 48px; }
+    .article-hero .section-label { color:rgba(255,255,255,0.75); }
+    .article-hero h1 { font-size:clamp(1.6rem,4vw,2.4rem); margin:12px 0 18px; line-height:1.25; }
+    .article-meta { display:flex; gap:16px; flex-wrap:wrap; color:rgba(255,255,255,0.8); font-size:0.88rem; }
+    .article-meta span { display:flex; align-items:center; gap:6px; }
+    .article-body { max-width:740px; margin:0 auto; padding:48px 20px 64px; }
+    .article-body p { font-size:1.05rem; line-height:1.85; color:#374151; margin-bottom:20px; }
+    .article-body h2 { font-size:1.3rem; font-weight:700; color:#0f172a; margin:32px 0 12px; }
+    .back-link { display:inline-flex; align-items:center; gap:8px; color:#0EA5E9; font-weight:600; text-decoration:none; margin-bottom:32px; font-size:0.95rem; }
+    .back-link:hover { gap:12px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="projects.html"><i class="fas fa-folder"></i> Projects</a></li>
+        <li><a href="blog.html" class="active"><i class="fas fa-pen"></i> Blog</a></li>
+        <li><a href="../index.html#contact"><i class="fas fa-phone"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <p class="section-label">Design &bull; Dec 2025</p>
+      <h1>UI/UX Principles That Drive Real Results</h1>
+      <div class="article-meta">
+        <span><i class="far fa-clock"></i> 3 min read</span>
+        <span><i class="far fa-user"></i> Diah M</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="article-body">
+    <a href="blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+
+    <p>Great design is invisible. When an interface works perfectly, users don't notice the design — they just achieve their goal. When it doesn't, they notice everything. Here are the core principles I apply to every project at Codefusion.</p>
+
+    <h2>Clarity over cleverness</h2>
+    <p>A confusing creative layout is worse than a boring clear one. Users shouldn't have to think about how to use your interface. Every label, button, and layout decision should be immediately obvious. If you're explaining how something works, the design has already failed.</p>
+
+    <h2>Consistency builds trust</h2>
+    <p>Use the same colours, type scales, spacing, and component patterns throughout. Consistency makes an interface feel polished and professional. It also reduces the cognitive load on users — once they learn how one part works, they know how everything works.</p>
+
+    <h2>Hierarchy guides the eye</h2>
+    <p>Size, weight, colour, and spacing are your tools for creating visual hierarchy. The most important information should be the most visually prominent. A well-structured page tells the eye exactly where to go next without the user consciously realising it.</p>
+
+    <h2>Feedback for every action</h2>
+    <p>Every interactive element should give feedback. Buttons change on hover. Forms show errors clearly. Loading states communicate progress. Without feedback, users don't know if their actions worked — and uncertainty leads to abandonment.</p>
+
+    <p>Good design is patient, empathetic work. It's about deeply understanding how real people think and feel, then removing every obstacle between them and their goal.</p>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="../index.html" class="nav-logo">Code<span>fusion</span></a>
+      <p>&copy; 2026 Codefusion. All rights reserved.</p>
+      <p class="footer-made">made with 🩵 by Diah M</p>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
