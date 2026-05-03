@@ -974,6 +974,8 @@ img { max-width: 100%; display: block; }
   gap: 16px;
 }
 .footer p { color: rgba(255,255,255,0.5); font-size: 0.88rem; }
+.footer .nav-logo { color: #fff; }
+.footer-made { color: rgba(255,255,255,0.45); font-size: 0.82rem; margin-top: 6px; }
 .footer-links {
   display: flex;
   gap: 24px;
