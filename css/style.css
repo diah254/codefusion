@@ -317,10 +317,10 @@ img { max-width: 100%; display: block; }
   gap: 8px;
   background: #0EA5E9;
   color: #fff;
-  padding: 13px 30px;
-  border-radius: 10px;
+  padding: 10px 22px;
+  border-radius: 50px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   text-decoration: none;
   transition: var(--transition);
   box-shadow: 0 4px 18px rgba(14,165,233,0.35);
@@ -337,11 +337,11 @@ img { max-width: 100%; display: block; }
   gap: 8px;
   background: transparent;
   color: #0f172a;
-  padding: 13px 30px;
-  border-radius: 10px;
+  padding: 10px 22px;
+  border-radius: 50px;
   border: 2px solid #0f172a;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   text-decoration: none;
   transition: var(--transition);
 }
