@@ -183,8 +183,8 @@
   .section-title { font-size: 1.6rem; }
 
   /* Navbar */
-  .nav-links { width: 92vw; right: -100vw; }
-  .nav-links.open { right: 4vw; }
+  .nav-links { width: 200px; right: -220px; }
+  .nav-links.open { right: 12px; }
 
   /* Hero */
   .hero-heading { font-size: 1.85rem; }
