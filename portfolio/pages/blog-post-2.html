@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile-First Design Wins | Codefusion Blog</title>
+  <link rel="stylesheet" href="../css/style.css?v=7" />
+  <link rel="stylesheet" href="../css/responsive.css?v=7" />
+  <link rel="stylesheet" href="../css/futuristic.css?v=7" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="particle-canvas" class="particle-canvas"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Code<span class="logo-accent">fusion</span></span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> ABOUT</a></li>
+        <li><a href="projects.html"><i class="fas fa-folder-open"></i> PROJECTS</a></li>
+        <li><a href="blog.html"><i class="fas fa-pen-nib"></i> BLOG</a></li>
+        <li><a href="../index.html#contact"><i class="fas fa-phone-alt"></i> CONTACT</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <article class="blog-post">
+    <div class="container">
+      <header class="blog-post-header">
+        <span class="blog-category">Design</span>
+        <h1>Why Mobile-First Design Wins Every Time</h1>
+        <div class="blog-post-meta">
+          <span><i class="far fa-calendar"></i> March 28, 2026</span>
+          <span><i class="far fa-clock"></i> 4 min read</span>
+          <span><i class="far fa-user"></i> Diah</span>
+        </div>
+      </header>
+
+      <div class="blog-post-image">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80" alt="Mobile phone" />
+      </div>
+
+      <div class="blog-post-content">
+        <p class="lead">Over 60% of web traffic comes from mobile devices. Yet most teams still design desktop-first and squeeze their designs down. Here's why that approach is backwards.</p>
+
+        <h2>The Mobile Reality</h2>
+        <p>In Kenya and across Africa, mobile isn't just primary — it's often the only way people access the internet. When we built PocketConnect, we assumed users would be on 3G networks with small screens. That assumption shaped every design decision.</p>
+
+        <h2>Constraint Breeds Creativity</h2>
+        <p>Desktop design is easy. You have space for sidebars, mega-menus, and multi-column layouts. Mobile forces you to prioritize. What's the one action a user needs? What's the one message they must see? When you answer those questions for mobile, the desktop version practically designs itself.</p>
+
+        <blockquote>"Designing for mobile first doesn't mean mobile-only. It means starting with the hardest constraints and scaling up."</blockquote>
+
+        <h2>Performance by Default</h2>
+        <p>Mobile-first thinking forces performance optimization. Large images become responsive. JavaScript bundles get code-split. APIs return only what's needed. The result? A site that feels fast on every device.</p>
+
+        <h2>Our Process at Codefusion</h2>
+        <ul>
+          <li>Wireframe in 375px width first</li>
+          <li>Design the core user journey for thumbs</li>
+          <li>Test on real devices, not just Chrome DevTools</li>
+          <li>Add complexity for desktop, never remove it for mobile</li>
+          <li>Measure Core Web Vitals on 3G throttling</li>
+        </ul>
+
+        <p>The result is PocketConnect — a messaging app that feels native on both Android and iOS, with 4.8 stars on both app stores.</p>
+      </div>
+
+      <div class="blog-post-nav">
+        <a href="blog-post-1.html" class="btn btn-outline-glow"><i class="fas fa-arrow-left"></i> Previous</a>
+        <a href="blog-post-3.html" class="btn btn-glow">Next Article <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-copy">&copy; 2026 Codefusion. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/futuristic.js"></script>
+</body>
+</html>
