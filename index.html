@@ -3,26 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Codefusion | Future of Digital Experiences</title>
-  <link rel="stylesheet" href="css/style.css?v=7" />
-  <link rel="stylesheet" href="css/responsive.css?v=7" />
-  <link rel="stylesheet" href="css/futuristic.css?v=7" />
+  <title>Codefusion | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/responsive.css?v=3" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-  <!-- Particle Network Canvas -->
-  <canvas id="particle-canvas" class="particle-canvas"></canvas>
 
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-bracket">&lt;</span>
-        <span class="logo-text">Code<span class="logo-accent">fusion</span></span>
-        <span class="logo-bracket">/&gt;</span>
-      </a>
+      <a href="index.html" class="nav-logo">Code<span>fusion</span></a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html" class="active"><i class="fas fa-home"></i> HOME</a></li>
         <li><a href="pages/about.html"><i class="fas fa-user"></i> ABOUT</a></li>
@@ -38,74 +30,64 @@
 
   <!-- Hero Section -->
   <section class="hero" id="home">
+    <canvas id="code-canvas" style="display:block;position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span class="badge-text">Available for Projects</span>
-      </div>
-      
-      <h1 class="hero-title">
-        <span class="title-line" data-text="Building the">Building the</span>
-        <span class="title-line gradient" data-text="FUTURE">FUTURE</span>
-        <span class="title-line" data-text="of the Web">of the Web</span>
-      </h1>
-      
-      <p class="hero-subtitle">I'm Diah, founder of Codefusion. We architect digital experiences that push boundaries — from AI-powered interfaces to immersive web applications.</p>
-      
+      <h1 class="hero-title"><span class="title-glow">Codefusion</span></h1>
+      <p class="hero-greeting">Hello, I'm Diah — Founder & Lead Developer</p>
+      <p class="hero-subtitle">We build elegant websites and software solutions with clean code and thoughtful design. Transforming ideas into powerful digital experiences since 2024.</p>
       <div class="hero-actions">
-        <a href="pages/projects.html" class="btn btn-glow">
-          <span>Explore Projects</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="pages/about.html" class="btn btn-glass">
-          <span>Meet the Team</span>
-          <i class="fas fa-users"></i>
-        </a>
-      </div>
-      
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-number" data-count="50">0</span>
-          <span class="stat-label">Projects Delivered</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-count="30">0</span>
-          <span class="stat-label">Happy Clients</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-count="3">0</span>
-          <span class="stat-label">Years Experience</span>
-        </div>
+        <a href="pages/projects.html" class="btn btn-primary">View My Work</a>
+        <a href="pages/about.html" class="btn btn-outline">About Me</a>
       </div>
     </div>
-    
-    <div class="scroll-indicator">
-      <div class="scroll-mouse">
-        <div class="scroll-wheel"></div>
-      </div>
-      <span>Scroll to explore</span>
+    <div class="hero-scroll">
+      <span>Scroll down</span>
+      <i class="fas fa-chevron-down"></i>
     </div>
   </section>
 
-  <!-- Tech Stack Marquee -->
-  <section class="tech-marquee">
-    <div class="marquee-track">
-      <span class="marquee-item"><i class="fab fa-react"></i> React</span>
-      <span class="marquee-item"><i class="fab fa-node"></i> Node.js</span>
-      <span class="marquee-item"><i class="fab fa-python"></i> Python</span>
-      <span class="marquee-item"><i class="fab fa-js"></i> TypeScript</span>
-      <span class="marquee-item"><i class="fas fa-database"></i> PostgreSQL</span>
-      <span class="marquee-item"><i class="fab fa-docker"></i> Docker</span>
-      <span class="marquee-item"><i class="fas fa-cloud"></i> AWS</span>
-      <span class="marquee-item"><i class="fab fa-figma"></i> Figma</span>
-      <span class="marquee-item"><i class="fas fa-brain"></i> AI/ML</span>
-      <span class="marquee-item"><i class="fab fa-react"></i> React</span>
-      <span class="marquee-item"><i class="fab fa-node"></i> Node.js</span>
-      <span class="marquee-item"><i class="fab fa-python"></i> Python</span>
-      <span class="marquee-item"><i class="fab fa-js"></i> TypeScript</span>
-      <span class="marquee-item"><i class="fas fa-database"></i> PostgreSQL</span>
-      <span class="marquee-item"><i class="fab fa-docker"></i> Docker</span>
-      <span class="marquee-item"><i class="fas fa-cloud"></i> AWS</span>
+  <!-- Skills Section -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What I do</p>
+        <h2 class="section-title">Skills & Expertise</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-code"></i></div>
+          <h3>Frontend Development</h3>
+          <p>Building responsive, accessible UIs with HTML, CSS, JavaScript and modern frameworks.</p>
+          <div class="skill-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend Development</h3>
+          <p>Designing scalable APIs and server-side applications with robust databases.</p>
+          <div class="skill-tags">
+            <span>Node.js</span><span>Python</span><span>REST APIs</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-palette"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Crafting intuitive user interfaces with clean, modern visual aesthetics.</p>
+          <div class="skill-tags">
+            <span>Figma</span><span>Wireframing</span><span>Prototyping</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+          <h3>DevOps & Deployment</h3>
+          <p>Managing CI/CD pipelines and cloud deployments for production-ready apps.</p>
+          <div class="skill-tags">
+            <span>Git</span><span>Docker</span><span>AWS</span><span>Linux</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -113,180 +95,129 @@
   <section class="featured section" id="featured">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Portfolio</span>
-        <h2 class="section-title">Featured <span class="gradient">Projects</span></h2>
-        <p class="section-desc">Selected works that showcase our expertise in building scalable digital products.</p>
+        <p class="section-label">Portfolio highlights</p>
+        <h2 class="section-title">Featured Projects</h2>
       </div>
-      
-      <div class="projects-showcase">
-        <div class="project-card featured">
+      <div class="projects-grid">
+        <div class="project-card featured-card">
           <div class="project-image">
-            <img src="images/project1.png" alt="Synapse Dashboard" />
-            <div class="project-glow"></div>
+            <img src="images/project1.png" alt="Project 1" id="project1-img" />
+            <div class="project-overlay">
+              <a href="pages/projects.html" class="btn btn-sm">View Details</a>
+            </div>
           </div>
           <div class="project-info">
-            <div class="project-tags">
-              <span>React</span><span>Node.js</span><span>WebSocket</span>
-            </div>
+            <span class="project-tag">Web App</span>
             <h3>Synapse Dashboard</h3>
-            <p>Real-time analytics dashboard processing 1M+ events daily with sub-second latency.</p>
-            <a href="pages/projects.html" class="project-link">
-              View Case Study <i class="fas fa-arrow-right"></i>
-            </a>
+            <p>A modern web application built with React and Node.js, featuring real-time updates and a clean UI.</p>
+            <div class="project-links">
+              <a href="#" class="link-icon" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="link-icon" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
           </div>
         </div>
-        
-        <div class="project-grid">
-          <div class="project-card">
-            <div class="project-image">
-              <img src="images/project2.png" alt="AuthFlow API" />
-            </div>
-            <div class="project-info">
-              <span class="project-tag">API Gateway</span>
-              <h3>AuthFlow API</h3>
-              <p>Secure authentication handling 100K requests/min.</p>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/project2.png" alt="Project 2 - RESTful API" />
+            <div class="project-overlay">
+              <a href="pages/projects.html" class="btn btn-sm">View Details</a>
             </div>
           </div>
-          
-          <div class="project-card">
-            <div class="project-image">
-              <img src="images/project3.png" alt="PocketConnect" />
+          <div class="project-info">
+            <span class="project-tag">API</span>
+            <h3>AuthFlow API</h3>
+            <p>RESTful API service with authentication, rate limiting and comprehensive documentation.</p>
+            <div class="project-links">
+              <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
+              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
             </div>
-            <div class="project-info">
-              <span class="project-tag">Mobile</span>
-              <h3>PocketConnect</h3>
-              <p>Cross-platform messaging with end-to-end encryption.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/project3.png" alt="Project 3 - Mobile App" />
+            <div class="project-overlay">
+              <a href="pages/projects.html" class="btn btn-sm">View Details</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Mobile</span>
+            <h3>PocketConnect</h3>
+            <p>Cross-platform mobile app delivering a seamless experience on iOS and Android.</p>
+            <div class="project-links">
+              <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
+              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
         </div>
       </div>
-      
       <div class="section-cta">
-        <a href="pages/projects.html" class="btn btn-outline-glow">View All Projects</a>
+        <a href="pages/projects.html" class="btn btn-primary">See All Projects</a>
       </div>
     </div>
   </section>
 
-  <!-- Skills Orbit -->
-  <section class="skills-orbit section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Capabilities</span>
-        <h2 class="section-title">Our <span class="gradient">Expertise</span></h2>
-      </div>
-      
-      <div class="skills-grid-modern">
-        <div class="skill-card-modern" data-tilt>
-          <div class="skill-icon-wrap">
-            <i class="fas fa-code"></i>
-            <div class="icon-glow"></div>
-          </div>
-          <h3>Frontend Engineering</h3>
-          <p>React, Vue, Next.js — pixel-perfect UIs with blazing performance.</p>
-          <div class="skill-progress">
-            <div class="progress-bar" style="width: 95%"></div>
-            <span>95%</span>
-          </div>
-        </div>
-        
-        <div class="skill-card-modern" data-tilt>
-          <div class="skill-icon-wrap">
-            <i class="fas fa-server"></i>
-            <div class="icon-glow"></div>
-          </div>
-          <h3>Backend Systems</h3>
-          <p>Scalable APIs, microservices, and cloud architecture.</p>
-          <div class="skill-progress">
-            <div class="progress-bar" style="width: 90%"></div>
-            <span>90%</span>
-          </div>
-        </div>
-        
-        <div class="skill-card-modern" data-tilt>
-          <div class="skill-icon-wrap">
-            <i class="fas fa-robot"></i>
-            <div class="icon-glow"></div>
-          </div>
-          <h3>AI Integration</h3>
-          <p>LLM-powered features, chatbots, and intelligent automation.</p>
-          <div class="skill-progress">
-            <div class="progress-bar" style="width: 85%"></div>
-            <span>85%</span>
-          </div>
-        </div>
-        
-        <div class="skill-card-modern" data-tilt>
-          <div class="skill-icon-wrap">
-            <i class="fas fa-palette"></i>
-            <div class="icon-glow"></div>
-          </div>
-          <h3>UI/UX Design</h3>
-          <p>User-centered design with prototyping and motion.</p>
-          <div class="skill-progress">
-            <div class="progress-bar" style="width: 92%"></div>
-            <span>92%</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog Preview -->
+  <!-- Blog Preview Section -->
   <section class="blog-preview section" id="blog">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Insights</span>
-        <h2 class="section-title">From the <span class="gradient">Blog</span></h2>
+        <p class="section-label">Thoughts & Insights</p>
+        <h2 class="section-title">From the Blog</h2>
+        <p class="section-desc">Tips, stories, and lessons from building Codefusion.</p>
       </div>
-      
-      <div class="blog-grid-modern">
-        <article class="blog-card-modern">
+      <div class="blog-grid">
+
+        <article class="blog-card">
           <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80" alt="Web development" />
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80" alt="Web development code on screen" loading="lazy" />
             <span class="blog-category">Web Dev</span>
           </div>
           <div class="blog-body">
             <div class="blog-meta">
               <span><i class="far fa-calendar"></i> April 2026</span>
-              <span><i class="far fa-clock"></i> 5 min</span>
+              <span><i class="far fa-clock"></i> 5 min read</span>
             </div>
-            <h3><a href="pages/blog-post-1.html">Building Scalable Web Apps from Scratch</a></h3>
-            <p>From monolith to microservices — the patterns that separate hobby projects from production systems.</p>
-            <a href="pages/blog-post-1.html" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+            <h3><a href="pages/blog.html">Building Scalable Web Apps from Scratch</a></h3>
+            <p>A practical guide to architecting web applications that grow with your users — from monolith to microservices.</p>
+            <a href="pages/blog.html" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
-        
-        <article class="blog-card-modern">
+
+        <article class="blog-card">
           <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80" alt="Mobile design" />
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80" alt="Mobile phone with app" loading="lazy" />
             <span class="blog-category">Mobile</span>
           </div>
           <div class="blog-body">
             <div class="blog-meta">
               <span><i class="far fa-calendar"></i> March 2026</span>
-              <span><i class="far fa-clock"></i> 4 min</span>
+              <span><i class="far fa-clock"></i> 4 min read</span>
             </div>
-            <h3><a href="pages/blog-post-2.html">Why Mobile-First Design Wins Every Time</a></h3>
-            <p>Over 60% of traffic is mobile. Here's why designing for phones first is non-negotiable.</p>
-            <a href="pages/blog-post-2.html" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+            <h3><a href="pages/blog.html">Why Mobile-First Design Wins Every Time</a></h3>
+            <p>Over 60% of web traffic comes from mobile. Here's why designing for phones first is no longer optional.</p>
+            <a href="pages/blog.html" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
-        
-        <article class="blog-card-modern">
+
+        <article class="blog-card">
           <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80" alt="Startup story" />
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80" alt="Business planning and startup" loading="lazy" />
             <span class="blog-category">Startup</span>
           </div>
           <div class="blog-body">
             <div class="blog-meta">
               <span><i class="far fa-calendar"></i> Feb 2026</span>
-              <span><i class="far fa-clock"></i> 6 min</span>
+              <span><i class="far fa-clock"></i> 7 min read</span>
             </div>
-            <h3><a href="pages/blog-post-3.html">How I Founded Codefusion in 2024</a></h3>
-            <p>The real story of starting a tech company and lessons learned along the way.</p>
-            <a href="pages/blog-post-3.html" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+            <h3><a href="pages/blog.html">How I Founded Codefusion in 2024</a></h3>
+            <p>The real story behind starting a tech company — the struggles, surprises, and lessons that shaped everything.</p>
+            <a href="pages/blog.html" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
+
+      </div>
+      <div class="section-cta">
+        <a href="pages/blog.html" class="btn btn-outline">View All Posts</a>
       </div>
     </div>
   </section>
@@ -295,65 +226,71 @@
   <section class="contact section" id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Connect</span>
-        <h2 class="section-title">Let's Build <span class="gradient">Together</span></h2>
+        <p class="section-label">Get in touch</p>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-desc">Have a project in mind or want to chat? I'd love to hear from you.</p>
       </div>
-      
-      <div class="contact-grid-modern">
-        <div class="contact-info-modern">
+      <div class="contact-grid">
+        <div class="contact-info">
           <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
+            <i class="fas fa-envelope icon-gmail"></i>
             <div>
               <h4>Email</h4>
-              <a href="mailto:bazumnoma254@gmail.com">bazumnoma254@gmail.com</a>
+              <a href="mailto:bazumnoma254@gmail.com" class="contact-name-link">Diah</a>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">
+            <i class="fab fa-whatsapp icon-whatsapp"></i>
+            <div>
+              <h4>WhatsApp / Phone</h4>
+              <a href="https://wa.me/254746362415" target="_blank" class="contact-name-link">Diah</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock icon-clock"></i>
+            <div>
+              <h4>Response Time</h4>
+              <span>Within 24 hours</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="mailto:bazumnoma254@gmail.com" class="social-btn social-btn-gmail" title="Gmail">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/254746362415" class="social-btn social-btn-whatsapp" title="WhatsApp" target="_blank">
               <i class="fab fa-whatsapp"></i>
-            </div>
-            <div>
-              <h4>WhatsApp</h4>
-              <a href="https://wa.me/254746362415">+254 746 362 415</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div>
-              <h4>Location</h4>
-              <span>Nairobi, Kenya</span>
-            </div>
+            </a>
           </div>
         </div>
-        
-        <form class="contact-form-modern" id="contact-form">
+        <form class="contact-form" id="contact-form">
+          <input type="hidden" name="access_key" value="7b432833-789e-406f-94f8-5f247b471fb8" />
+          <input type="hidden" name="subject" value="New message from your Codefusion portfolio" />
+          <input type="hidden" name="from_name" value="Codefusion Portfolio" />
           <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="Your Name" required />
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
           </div>
           <div class="form-group">
-            <input type="email" id="email" name="email" placeholder="Your Email" required />
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
           </div>
           <div class="form-group">
-            <select id="service" name="service">
-              <option value="">What do you need?</option>
-              <option value="website">Website Development</option>
-              <option value="app">Mobile App</option>
-              <option value="api">API Development</option>
-              <option value="design">UI/UX Design</option>
-              <option value="other">Something Else</option>
-            </select>
+            <label for="inquiry">Subject / Inquiry</label>
+            <input type="text" id="inquiry" name="inquiry" placeholder="e.g. Website design, App development..." />
           </div>
           <div class="form-group">
-            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-glow btn-full">
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
             <i class="fas fa-paper-plane"></i> Send Message
           </button>
-          <p class="form-success" id="form-success">Thanks! I'll get back to you within 24 hours.</p>
+          <p class="form-success" id="form-success" style="display:none;">
+            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you within 24 hours.
+          </p>
+          <p class="form-error" id="form-error" style="display:none;">
+            <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again.
+          </p>
         </form>
       </div>
     </div>
@@ -361,24 +298,18 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <a href="index.html" class="footer-logo">
-          <span class="logo-bracket">&lt;</span>
-          Code<span class="logo-accent">fusion</span>
-          <span class="logo-bracket">/&gt;</span>
-        </a>
-        <p class="footer-desc">Building the future of digital experiences, one pixel at a time.</p>
-        <div class="social-links">
-          <a href="mailto:bazumnoma254@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
-          <a href="https://wa.me/254746362415" class="social-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <p class="footer-copy">&copy; 2026 Codefusion. Crafted with code and creativity.</p>
-      </div>
+    <div class="container footer-inner">
+      <a href="index.html" class="nav-logo">Code<span>fusion</span></a>
+      <p>&copy; 2026 Codefusion. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/projects.html">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/futuristic.js"></script>
 </body>
 </html>
