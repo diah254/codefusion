@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Codefusion | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css?v=3" />
-  <link rel="stylesheet" href="css/responsive.css?v=3" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">Code<span>fusion</span></a>
@@ -28,128 +27,50 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <!-- Decorative blobs -->
-    <div class="hero-blob hero-blob-tl"></div>
-    <div class="hero-blob hero-blob-br"></div>
-
-    <div class="hero-split container">
-      <!-- Left: Text -->
+  <section class="hero">
+    <div class="hero-content container">
       <div class="hero-text">
-        <p class="hero-label"><i class="fas fa-code"></i> &nbsp;CEO & Lead Developer</p>
+        <p class="section-label">CEO &amp; Lead Developer</p>
         <h1 class="hero-heading">Hello, I'm <span class="hero-name">Diah</span><br>Founder of<br><span class="hero-brand">Codefusion</span></h1>
         <p class="hero-desc">Building elegant websites and software solutions with clean code and thoughtful design. Transforming ideas into powerful digital experiences since 2024.</p>
-        <div class="hero-actions">
-          <a href="pages/projects.html" class="btn-hero-primary">View My Work</a>
+        <div class="hero-buttons">
+          <a href="#featured" class="btn-hero-primary">View My Work</a>
           <a href="pages/about.html" class="btn-hero-dark">About Me</a>
         </div>
       </div>
-
-      <!-- Right: Illustration -->
       <div class="hero-illustration">
         <svg viewBox="0 0 560 480" xmlns="http://www.w3.org/2000/svg" aria-label="Codefusion illustration">
-          <!-- Background circle -->
-          <circle cx="310" cy="240" r="195" fill="#E0F2FE"/>
-          <circle cx="170" cy="370" r="70" fill="#BAE6FD" opacity="0.55"/>
-
-          <!-- Monitor / screen -->
-          <rect x="155" y="130" width="270" height="185" rx="14" fill="#0EA5E9"/>
-          <rect x="170" y="145" width="240" height="155" rx="6" fill="#F0F9FF"/>
-          <!-- Code lines on screen -->
-          <rect x="185" y="162" width="90" height="9" rx="4" fill="#0EA5E9" opacity="0.5"/>
-          <rect x="185" y="180" width="130" height="9" rx="4" fill="#38BDF8" opacity="0.7"/>
-          <rect x="185" y="198" width="70" height="9" rx="4" fill="#0EA5E9" opacity="0.4"/>
-          <rect x="185" y="216" width="110" height="9" rx="4" fill="#38BDF8" opacity="0.6"/>
-          <rect x="185" y="234" width="85" height="9" rx="4" fill="#0EA5E9" opacity="0.5"/>
-          <rect x="185" y="252" width="150" height="9" rx="4" fill="#38BDF8" opacity="0.5"/>
-          <!-- Code bracket on screen -->
-          <text x="285" y="220" font-family="monospace" font-size="34" fill="#0284C7" opacity="0.85" font-weight="bold">&lt;/&gt;</text>
-          <!-- Monitor stand -->
-          <rect x="268" y="315" width="44" height="22" rx="4" fill="#0EA5E9"/>
-          <rect x="240" y="336" width="100" height="12" rx="6" fill="#0284C7"/>
-
-          <!-- Floating code tag badge -->
-          <rect x="395" y="108" width="88" height="42" rx="10" fill="#EF4444"/>
-          <text x="407" y="135" font-family="monospace" font-size="18" fill="white" font-weight="bold">&lt;/&gt;</text>
-
-          <!-- Chat bubble left -->
-          <rect x="68" y="210" width="96" height="52" rx="12" fill="#7DD3FC" opacity="0.85"/>
-          <polygon points="100,262 88,282 118,262" fill="#7DD3FC" opacity="0.85"/>
-          <rect x="82" y="225" width="68" height="8" rx="4" fill="white" opacity="0.8"/>
-          <rect x="82" y="241" width="46" height="8" rx="4" fill="white" opacity="0.6"/>
-
-          <!-- Chat bubble right -->
-          <rect x="418" y="235" width="96" height="52" rx="12" fill="#38BDF8" opacity="0.8"/>
-          <polygon points="448,287 436,307 466,287" fill="#38BDF8" opacity="0.8"/>
-          <rect x="432" y="250" width="68" height="8" rx="4" fill="white" opacity="0.8"/>
-          <rect x="432" y="266" width="46" height="8" rx="4" fill="white" opacity="0.6"/>
-
-          <!-- Person 1 (left, thinking) -->
-          <circle cx="108" cy="350" r="22" fill="#FCD34D"/>
-          <rect x="88" y="372" width="40" height="58" rx="12" fill="#0EA5E9"/>
-          <rect x="70" y="376" width="20" height="44" rx="10" fill="#0EA5E9" opacity="0.8"/>
-          <rect x="128" y="376" width="20" height="44" rx="10" fill="#0EA5E9" opacity="0.8"/>
-          <rect x="90" y="424" width="16" height="34" rx="8" fill="#1D4ED8"/>
-          <rect x="114" y="424" width="16" height="34" rx="8" fill="#1D4ED8"/>
-
-          <!-- Person 2 (right, with telescope / looking forward) -->
-          <circle cx="442" cy="318" r="22" fill="#FCD34D"/>
-          <rect x="422" y="340" width="40" height="58" rx="12" fill="#FB923C"/>
-          <rect x="404" y="344" width="20" height="44" rx="10" fill="#FB923C" opacity="0.8"/>
-          <!-- Telescope -->
-          <rect x="454" y="330" width="44" height="10" rx="5" fill="#0284C7"/>
-          <rect x="490" y="325" width="14" height="20" rx="4" fill="#0EA5E9"/>
-          <rect x="422" y="392" width="16" height="34" rx="8" fill="#C2410C"/>
-          <rect x="446" y="392" width="16" height="34" rx="8" fill="#C2410C"/>
-
-          <!-- Person 3 (bottom right, seated with laptop) -->
-          <circle cx="400" cy="390" r="20" fill="#FCD34D"/>
-          <rect x="382" y="410" width="36" height="50" rx="10" fill="#7C3AED"/>
-          <!-- Laptop on lap -->
-          <rect x="370" y="430" width="56" height="34" rx="6" fill="#0EA5E9"/>
-          <rect x="375" y="435" width="46" height="24" rx="3" fill="#E0F2FE"/>
-
-          <!-- Decorative dots -->
-          <circle cx="490" cy="130" r="9" fill="#0EA5E9" opacity="0.5"/>
-          <circle cx="510" cy="152" r="5" fill="#7DD3FC" opacity="0.7"/>
-          <circle cx="68" cy="155" r="7" fill="#BAE6FD" opacity="0.8"/>
-          <circle cx="50" cy="175" r="4" fill="#0EA5E9" opacity="0.4"/>
-
-          <!-- Circular arrow around monitor (idea loop) -->
-          <path d="M 200 105 A 90 90 0 0 1 390 105" fill="none" stroke="#0EA5E9" stroke-width="3" stroke-dasharray="10,6" marker-end="url(#arr)"/>
-          <defs>
-            <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-              <path d="M0,0 L6,3 L0,6 Z" fill="#0EA5E9"/>
-            </marker>
-          </defs>
-
-          <!-- Small leaves / plants -->
-          <ellipse cx="360" cy="455" rx="22" ry="10" fill="#4ADE80" opacity="0.7" transform="rotate(-30,360,455)"/>
-          <ellipse cx="380" cy="462" rx="18" ry="8" fill="#22C55E" opacity="0.6" transform="rotate(20,380,462)"/>
-          <ellipse cx="135" cy="460" rx="20" ry="9" fill="#4ADE80" opacity="0.6" transform="rotate(15,135,460)"/>
+          <circle cx="420" cy="185" r="160" fill="#DFF4FF" opacity="0.9"/>
+          <circle cx="110" cy="110" r="130" fill="#DFF4FF" opacity="0.9"/>
+          <rect x="170" y="130" width="220" height="150" rx="16" fill="#0EA5E9"/>
+          <rect x="188" y="148" width="184" height="114" rx="10" fill="#ffffff"/>
+          <rect x="240" y="282" width="60" height="18" rx="9" fill="#0284C7"/>
+          <circle cx="110" cy="330" r="26" fill="#FACC15"/>
+          <rect x="90" y="350" width="40" height="70" rx="14" fill="#2EA8E5"/>
+          <rect x="80" y="350" width="14" height="46" rx="7" fill="#60A5FA"/>
+          <rect x="126" y="350" width="14" height="46" rx="7" fill="#60A5FA"/>
+          <circle cx="380" cy="320" r="26" fill="#FACC15"/>
+          <rect x="360" y="340" width="40" height="76" rx="14" fill="#F97316"/>
+          <circle cx="420" cy="374" r="22" fill="#8B5CF6"/>
+          <rect x="402" y="392" width="36" height="30" rx="8" fill="#E0F2FE" stroke="#0284C7" stroke-width="4"/>
+          <path d="M260 92 C 290 32, 410 30, 430 110" fill="none" stroke="#0EA5E9" stroke-width="4" stroke-dasharray="10 8"/>
+          <text x="246" y="220" fill="#0EA5E9" font-size="34" font-family="monospace">&lt;/&gt;</text>
         </svg>
       </div>
     </div>
-
-    <div class="hero-scroll">
-      <span>Scroll down</span>
-      <i class="fas fa-chevron-down"></i>
-    </div>
   </section>
 
-  <!-- Skills Section -->
   <section class="skills section" id="skills">
     <div class="container">
       <div class="section-header">
         <p class="section-label">What I do</p>
-        <h2 class="section-title">Skills & Expertise</h2>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
       </div>
       <div class="skills-grid">
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-code"></i></div>
           <h3>Frontend Development</h3>
-          <p>Building responsive, accessible UIs with HTML, CSS, JavaScript and modern frameworks.</p>
+          <p><span class="word-green">Building</span> <span class="word-red">responsive,</span> <span class="word-orange">accessible</span> <span class="word-blue">UIs</span> <span class="word-lightblue">with</span> <span class="word-pink">HTML,</span> <span class="word-green">CSS,</span> <span class="word-red">JavaScript</span> <span class="word-orange">and</span> <span class="word-blue">modern</span> <span class="word-lightblue">frameworks.</span></p>
           <div class="skill-tags">
             <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span>
           </div>
@@ -157,7 +78,7 @@
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-server"></i></div>
           <h3>Backend Development</h3>
-          <p>Designing scalable APIs and server-side applications with robust databases.</p>
+          <p><span class="word-green">Designing</span> <span class="word-red">scalable</span> <span class="word-orange">APIs</span> <span class="word-blue">and</span> <span class="word-lightblue">server-side</span> <span class="word-pink">applications</span> <span class="word-green">with</span> <span class="word-red">robust</span> <span class="word-orange">databases.</span></p>
           <div class="skill-tags">
             <span>Node.js</span><span>Python</span><span>REST APIs</span><span>SQL</span>
           </div>
@@ -165,15 +86,15 @@
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-palette"></i></div>
           <h3>UI/UX Design</h3>
-          <p>Crafting intuitive user interfaces with clean, modern visual aesthetics.</p>
+          <p><span class="word-green">Crafting</span> <span class="word-red">intuitive</span> <span class="word-orange">user</span> <span class="word-blue">interfaces</span> <span class="word-lightblue">with</span> <span class="word-pink">clean,</span> <span class="word-green">modern</span> <span class="word-red">visual</span> <span class="word-orange">aesthetics.</span></p>
           <div class="skill-tags">
             <span>Figma</span><span>Wireframing</span><span>Prototyping</span>
           </div>
         </div>
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-          <h3>DevOps & Deployment</h3>
-          <p>Managing CI/CD pipelines and cloud deployments for production-ready apps.</p>
+          <h3>DevOps &amp; Deployment</h3>
+          <p><span class="word-green">Managing</span> <span class="word-red">CI/CD</span> <span class="word-orange">pipelines</span> <span class="word-blue">and</span> <span class="word-lightblue">cloud</span> <span class="word-pink">deployments</span> <span class="word-green">for</span> <span class="word-red">production-ready</span> <span class="word-orange">apps.</span></p>
           <div class="skill-tags">
             <span>Git</span><span>Docker</span><span>AWS</span><span>Linux</span>
           </div>
@@ -181,7 +102,7 @@
         <div class="skill-card">
           <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
           <h3>Cyber Security</h3>
-          <p>Analysing threats, securing systems, and protecting digital assets from vulnerabilities and attacks.</p>
+          <p><span class="word-green">Analysing</span> <span class="word-red">threats,</span> <span class="word-orange">securing</span> <span class="word-blue">systems,</span> <span class="word-lightblue">and</span> <span class="word-pink">protecting</span> <span class="word-green">digital</span> <span class="word-red">assets</span> <span class="word-orange">from</span> <span class="word-blue">vulnerabilities</span> <span class="word-lightblue">and</span> <span class="word-pink">attacks.</span></p>
           <div class="skill-tags">
             <span>Threat Analysis</span><span>Pen Testing</span><span>Firewalls</span><span>SIEM</span>
           </div>
@@ -190,138 +111,6 @@
     </div>
   </section>
 
-  <!-- Featured Projects -->
-  <section class="featured section" id="featured">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">Portfolio highlights</p>
-        <h2 class="section-title">Featured Projects</h2>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card featured-card">
-          <div class="project-image">
-            <img src="images/project1.png" alt="Project 1" id="project1-img" />
-            <div class="project-overlay">
-              <a href="pages/projects.html" class="btn btn-sm">View Details</a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">Web App</span>
-            <h3>Synapse Dashboard</h3>
-            <p>A modern web application built with React and Node.js, featuring real-time updates and a clean UI.</p>
-            <div class="project-links">
-              <a href="#" class="link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" class="link-icon" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image">
-            <img src="images/project2.png" alt="Project 2 - RESTful API" />
-            <div class="project-overlay">
-              <a href="pages/projects.html" class="btn btn-sm">View Details</a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">API</span>
-            <h3>AuthFlow API</h3>
-            <p>RESTful API service with authentication, rate limiting and comprehensive documentation.</p>
-            <div class="project-links">
-              <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
-              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image">
-            <img src="images/project3.png" alt="Project 3 - Mobile App" />
-            <div class="project-overlay">
-              <a href="pages/projects.html" class="btn btn-sm">View Details</a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-tag">Mobile</span>
-            <h3>PocketConnect</h3>
-            <p>Cross-platform mobile app delivering a seamless experience on iOS and Android.</p>
-            <div class="project-links">
-              <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
-              <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-cta">
-        <a href="pages/projects.html" class="btn btn-primary">See All Projects</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog Preview Section -->
-  <section class="blog-preview section" id="blog">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">Thoughts & Insights</p>
-        <h2 class="section-title">From the Blog</h2>
-        <p class="section-desc">Tips, stories, and lessons from building Codefusion.</p>
-      </div>
-      <div class="blog-grid">
-
-        <article class="blog-card">
-          <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80" alt="Web development code on screen" loading="lazy" />
-            <span class="blog-category">Web Dev</span>
-          </div>
-          <div class="blog-body">
-            <div class="blog-meta">
-              <span><i class="far fa-calendar"></i> April 2026</span>
-              <span><i class="far fa-clock"></i> 5 min read</span>
-            </div>
-            <h3><a href="pages/blog.html">Building Scalable Web Apps from Scratch</a></h3>
-            <p>A practical guide to architecting web applications that grow with your users — from monolith to microservices.</p>
-            <a href="pages/blog.html" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80" alt="Mobile phone with app" loading="lazy" />
-            <span class="blog-category">Mobile</span>
-          </div>
-          <div class="blog-body">
-            <div class="blog-meta">
-              <span><i class="far fa-calendar"></i> March 2026</span>
-              <span><i class="far fa-clock"></i> 4 min read</span>
-            </div>
-            <h3><a href="pages/blog.html">Why Mobile-First Design Wins Every Time</a></h3>
-            <p>Over 60% of web traffic comes from mobile. Here's why designing for phones first is no longer optional.</p>
-            <a href="pages/blog.html" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80" alt="Business planning and startup" loading="lazy" />
-            <span class="blog-category">Startup</span>
-          </div>
-          <div class="blog-body">
-            <div class="blog-meta">
-              <span><i class="far fa-calendar"></i> Feb 2026</span>
-              <span><i class="far fa-clock"></i> 7 min read</span>
-            </div>
-            <h3><a href="pages/blog.html">How I Founded Codefusion in 2024</a></h3>
-            <p>The real story behind starting a tech company — the struggles, surprises, and lessons that shaped everything.</p>
-            <a href="pages/blog.html" class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </article>
-
-      </div>
-      <div class="section-cta">
-        <a href="pages/blog.html" class="btn btn-outline">View All Posts</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
   <section class="contact section" id="contact">
     <div class="container">
       <div class="section-header">
@@ -333,14 +122,7 @@
         <div class="contact-info">
           <div class="contact-item">
             <div class="contact-icon-wrap icon-gmail">
-              <!-- Gmail official logo -->
-              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
-                <path fill="#EA4335" d="M6 40h6V23.8L4 18v18c0 2.2 1.8 4 4 4z"/>
-                <path fill="#34A853" d="M36 40h6c2.2 0 4-1.8 4-4V18l-8 5.8z"/>
-                <path fill="#FBBC04" d="M36 8l-12 8.7L12 8H4l20 14.5L44 8z"/>
-                <path fill="#4285F4" d="M4 18l8 5.8V8H4z"/>
-                <path fill="#C5221F" d="M44 8h-8v15.8l8-5.8z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
             </div>
             <div>
               <h4>Email</h4>
@@ -349,10 +131,7 @@
           </div>
           <div class="contact-item">
             <div class="contact-icon-wrap icon-whatsapp">
-              <!-- WhatsApp official logo -->
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#fff">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.7A8 8 0 0 1 8.7 20L4 20l1.4-4.3A8 8 0 1 1 20 11.7Z"/><path d="M9 10.2c.3 1.2 1.1 2.6 2.8 4.1 1.7 1.5 3.3 2.3 4.5 2.7"/><path d="M14.5 13.8 16 12"/></svg>
             </div>
             <div>
               <h4>WhatsApp / Phone</h4>
@@ -361,10 +140,7 @@
           </div>
           <div class="contact-item">
             <div class="contact-icon-wrap icon-clock">
-              <!-- Clock icon -->
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#fff">
-                <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
             </div>
             <div>
               <h4>Response Time</h4>
@@ -372,70 +148,17 @@
             </div>
           </div>
           <div class="social-links">
-            <a href="mailto:bazumnoma254@gmail.com" class="social-btn social-btn-gmail" title="Gmail">
-              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-                <path fill="#EA4335" d="M6 40h6V23.8L4 18v18c0 2.2 1.8 4 4 4z"/>
-                <path fill="#34A853" d="M36 40h6c2.2 0 4-1.8 4-4V18l-8 5.8z"/>
-                <path fill="#FBBC04" d="M36 8l-12 8.7L12 8H4l20 14.5L44 8z"/>
-                <path fill="#4285F4" d="M4 18l8 5.8V8H4z"/>
-                <path fill="#C5221F" d="M44 8h-8v15.8l8-5.8z"/>
-              </svg>
+            <a href="mailto:bazumnoma254@gmail.com" class="social-btn social-btn-gmail" title="Email">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
             </a>
             <a href="https://wa.me/254746362415" class="social-btn social-btn-whatsapp" title="WhatsApp" target="_blank">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#fff">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.76-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.7A8 8 0 0 1 8.7 20L4 20l1.4-4.3A8 8 0 1 1 20 11.7Z"/><path d="M9 10.2c.3 1.2 1.1 2.6 2.8 4.1 1.7 1.5 3.3 2.3 4.5 2.7"/></svg>
             </a>
           </div>
         </div>
-        <form class="contact-form" id="contact-form">
-          <input type="hidden" name="access_key" value="7b432833-789e-406f-94f8-5f247b471fb8" />
-          <input type="hidden" name="subject" value="New message from your Codefusion portfolio" />
-          <input type="hidden" name="from_name" value="Codefusion Portfolio" />
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Diah M." required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="diahm@example.com" required />
-          </div>
-          <div class="form-group">
-            <label for="inquiry">Subject / Inquiry</label>
-            <input type="text" id="inquiry" name="inquiry" placeholder="e.g. Website design, App development..." />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
-          <p class="form-success" id="form-success" style="display:none;">
-            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you within 24 hours.
-          </p>
-          <p class="form-error" id="form-error" style="display:none;">
-            <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again.
-          </p>
-        </form>
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <a href="index.html" class="nav-logo">Code<span>fusion</span></a>
-      <p>&copy; 2026 Codefusion. All rights reserved.</p>
-      <p class="footer-made">made with 🩵 by Diah M</p>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/about.html">About</a></li>
-        <li><a href="pages/projects.html">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </footer>
 
   <script src="js/main.js"></script>
 </body>
