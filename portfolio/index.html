@@ -30,17 +30,108 @@
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-    <canvas id="code-canvas" style="display:block;position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title"><span class="title-glow">Codefusion</span></h1>
-      <p class="hero-greeting">Hello, I'm Diah — Founder & Lead Developer</p>
-      <p class="hero-subtitle">We build elegant websites and software solutions with clean code and thoughtful design. Transforming ideas into powerful digital experiences since 2024.</p>
-      <div class="hero-actions">
-        <a href="pages/projects.html" class="btn btn-primary">View My Work</a>
-        <a href="pages/about.html" class="btn btn-outline">About Me</a>
+    <!-- Decorative blobs -->
+    <div class="hero-blob hero-blob-tl"></div>
+    <div class="hero-blob hero-blob-br"></div>
+
+    <div class="hero-split container">
+      <!-- Left: Text -->
+      <div class="hero-text">
+        <p class="hero-label"><i class="fas fa-code"></i> &nbsp;CEO & Lead Developer</p>
+        <h1 class="hero-heading">Hello, I'm <span class="hero-name">Diah</span><br>Founder of<br><span class="hero-brand">Codefusion</span></h1>
+        <p class="hero-desc">Building elegant websites and software solutions with clean code and thoughtful design. Transforming ideas into powerful digital experiences since 2024.</p>
+        <div class="hero-actions">
+          <a href="pages/projects.html" class="btn-hero-primary">View My Work</a>
+          <a href="pages/about.html" class="btn-hero-dark">About Me</a>
+        </div>
+      </div>
+
+      <!-- Right: Illustration -->
+      <div class="hero-illustration">
+        <svg viewBox="0 0 560 480" xmlns="http://www.w3.org/2000/svg" aria-label="Codefusion illustration">
+          <!-- Background circle -->
+          <circle cx="310" cy="240" r="195" fill="#E0F2FE"/>
+          <circle cx="170" cy="370" r="70" fill="#BAE6FD" opacity="0.55"/>
+
+          <!-- Monitor / screen -->
+          <rect x="155" y="130" width="270" height="185" rx="14" fill="#0EA5E9"/>
+          <rect x="170" y="145" width="240" height="155" rx="6" fill="#F0F9FF"/>
+          <!-- Code lines on screen -->
+          <rect x="185" y="162" width="90" height="9" rx="4" fill="#0EA5E9" opacity="0.5"/>
+          <rect x="185" y="180" width="130" height="9" rx="4" fill="#38BDF8" opacity="0.7"/>
+          <rect x="185" y="198" width="70" height="9" rx="4" fill="#0EA5E9" opacity="0.4"/>
+          <rect x="185" y="216" width="110" height="9" rx="4" fill="#38BDF8" opacity="0.6"/>
+          <rect x="185" y="234" width="85" height="9" rx="4" fill="#0EA5E9" opacity="0.5"/>
+          <rect x="185" y="252" width="150" height="9" rx="4" fill="#38BDF8" opacity="0.5"/>
+          <!-- Code bracket on screen -->
+          <text x="285" y="220" font-family="monospace" font-size="34" fill="#0284C7" opacity="0.85" font-weight="bold">&lt;/&gt;</text>
+          <!-- Monitor stand -->
+          <rect x="268" y="315" width="44" height="22" rx="4" fill="#0EA5E9"/>
+          <rect x="240" y="336" width="100" height="12" rx="6" fill="#0284C7"/>
+
+          <!-- Floating code tag badge -->
+          <rect x="395" y="108" width="88" height="42" rx="10" fill="#EF4444"/>
+          <text x="407" y="135" font-family="monospace" font-size="18" fill="white" font-weight="bold">&lt;/&gt;</text>
+
+          <!-- Chat bubble left -->
+          <rect x="68" y="210" width="96" height="52" rx="12" fill="#7DD3FC" opacity="0.85"/>
+          <polygon points="100,262 88,282 118,262" fill="#7DD3FC" opacity="0.85"/>
+          <rect x="82" y="225" width="68" height="8" rx="4" fill="white" opacity="0.8"/>
+          <rect x="82" y="241" width="46" height="8" rx="4" fill="white" opacity="0.6"/>
+
+          <!-- Chat bubble right -->
+          <rect x="418" y="235" width="96" height="52" rx="12" fill="#38BDF8" opacity="0.8"/>
+          <polygon points="448,287 436,307 466,287" fill="#38BDF8" opacity="0.8"/>
+          <rect x="432" y="250" width="68" height="8" rx="4" fill="white" opacity="0.8"/>
+          <rect x="432" y="266" width="46" height="8" rx="4" fill="white" opacity="0.6"/>
+
+          <!-- Person 1 (left, thinking) -->
+          <circle cx="108" cy="350" r="22" fill="#FCD34D"/>
+          <rect x="88" y="372" width="40" height="58" rx="12" fill="#0EA5E9"/>
+          <rect x="70" y="376" width="20" height="44" rx="10" fill="#0EA5E9" opacity="0.8"/>
+          <rect x="128" y="376" width="20" height="44" rx="10" fill="#0EA5E9" opacity="0.8"/>
+          <rect x="90" y="424" width="16" height="34" rx="8" fill="#1D4ED8"/>
+          <rect x="114" y="424" width="16" height="34" rx="8" fill="#1D4ED8"/>
+
+          <!-- Person 2 (right, with telescope / looking forward) -->
+          <circle cx="442" cy="318" r="22" fill="#FCD34D"/>
+          <rect x="422" y="340" width="40" height="58" rx="12" fill="#FB923C"/>
+          <rect x="404" y="344" width="20" height="44" rx="10" fill="#FB923C" opacity="0.8"/>
+          <!-- Telescope -->
+          <rect x="454" y="330" width="44" height="10" rx="5" fill="#0284C7"/>
+          <rect x="490" y="325" width="14" height="20" rx="4" fill="#0EA5E9"/>
+          <rect x="422" y="392" width="16" height="34" rx="8" fill="#C2410C"/>
+          <rect x="446" y="392" width="16" height="34" rx="8" fill="#C2410C"/>
+
+          <!-- Person 3 (bottom right, seated with laptop) -->
+          <circle cx="400" cy="390" r="20" fill="#FCD34D"/>
+          <rect x="382" y="410" width="36" height="50" rx="10" fill="#7C3AED"/>
+          <!-- Laptop on lap -->
+          <rect x="370" y="430" width="56" height="34" rx="6" fill="#0EA5E9"/>
+          <rect x="375" y="435" width="46" height="24" rx="3" fill="#E0F2FE"/>
+
+          <!-- Decorative dots -->
+          <circle cx="490" cy="130" r="9" fill="#0EA5E9" opacity="0.5"/>
+          <circle cx="510" cy="152" r="5" fill="#7DD3FC" opacity="0.7"/>
+          <circle cx="68" cy="155" r="7" fill="#BAE6FD" opacity="0.8"/>
+          <circle cx="50" cy="175" r="4" fill="#0EA5E9" opacity="0.4"/>
+
+          <!-- Circular arrow around monitor (idea loop) -->
+          <path d="M 200 105 A 90 90 0 0 1 390 105" fill="none" stroke="#0EA5E9" stroke-width="3" stroke-dasharray="10,6" marker-end="url(#arr)"/>
+          <defs>
+            <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#0EA5E9"/>
+            </marker>
+          </defs>
+
+          <!-- Small leaves / plants -->
+          <ellipse cx="360" cy="455" rx="22" ry="10" fill="#4ADE80" opacity="0.7" transform="rotate(-30,360,455)"/>
+          <ellipse cx="380" cy="462" rx="18" ry="8" fill="#22C55E" opacity="0.6" transform="rotate(20,380,462)"/>
+          <ellipse cx="135" cy="460" rx="20" ry="9" fill="#4ADE80" opacity="0.6" transform="rotate(15,135,460)"/>
+        </svg>
       </div>
     </div>
+
     <div class="hero-scroll">
       <span>Scroll down</span>
       <i class="fas fa-chevron-down"></i>

@@ -21,6 +21,22 @@
 @media (max-width: 768px) {
   .section { padding: 72px 0; }
 
+  /* Hero split → stacked */
+  .hero-split {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 60px;
+  }
+  .hero-label { margin-left: auto; margin-right: auto; }
+  .hero-desc { margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-illustration { order: -1; }
+  .hero-illustration svg { max-width: 340px; }
+  .hero-blob-tl { width: 300px; height: 300px; top: -100px; left: -100px; }
+  .hero-blob-br { width: 260px; height: 260px; bottom: -80px; right: -80px; }
+
   /* Navbar */
   .hamburger { display: flex; }
 
