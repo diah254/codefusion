@@ -36,7 +36,7 @@ body {
 
 /* Subtle blue tint for inner pages */
 body.page-bg {
-  background: linear-gradient(160deg, #f0f9ff 0%, #e8f2fb 50%, #f3f8fd 100%);
+  background: linear-gradient(160deg, #dbeeff 0%, #e4f1fa 50%, #eef6fd 100%);
   min-height: 100vh;
 }
 
