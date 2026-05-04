@@ -34,37 +34,33 @@ body {
   overflow-x: hidden;
 }
 
-/* Blue gradient for all pages (hero keeps its own white bg) */
+/* Blue gradient tint — inner pages (body shows through transparent sections) */
 body.page-bg {
-  background:
-    linear-gradient(180deg,
-      #ffffff 0%,
-      #cce8ff 18%,
-      #b8deff 35%,
-      #d6eeff 55%,
-      #ffffff 72%,
-      #bde0ff 88%,
-      #e8f5ff 100%) fixed;
+  background: linear-gradient(160deg, #cce8ff 0%, #b8deff 40%, #d6eeff 70%, #e8f5ff 100%);
   min-height: 100vh;
 }
 body.page-bg section,
 body.page-bg .section,
 body.page-bg header,
 body.page-bg .about,
-body.page-bg .skills-section,
-body.page-bg .projects-section,
-body.page-bg .blog-section,
 body.page-bg .experience-section,
 body.page-bg .article-section {
   background: transparent !important;
 }
-/* Keep the hero/landing section white — untouched */
-body.page-bg .hero {
-  background: #ffffff !important;
-}
 body.page-bg .bg-light {
   background: rgba(160, 210, 255, 0.3) !important;
 }
+
+/* Hero stays completely untouched */
+body.page-bg .hero {
+  background: #ffffff !important;
+}
+
+/* Home page — directly style sections below hero (reliable on all mobile browsers) */
+#skills    { background: linear-gradient(180deg, #dff0ff 0%, #c8e6ff 100%); }
+#featured  { background: linear-gradient(180deg, #c8e6ff 0%, #d8eeff 100%); }
+#blog      { background: linear-gradient(180deg, #d4ecff 0%, #bfe0ff 100%); }
+#contact   { background: linear-gradient(180deg, #c2dfff 0%, #d4ecff 100%) !important; }
 
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
