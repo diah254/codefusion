@@ -868,6 +868,13 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow);
 }
 
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
 .form-group {
   margin-bottom: 12px;
 }
