@@ -34,9 +34,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Blue gradient tint — inner pages (body shows through transparent sections) */
 body.page-bg {
-  background: linear-gradient(160deg, #cce8ff 0%, #b8deff 40%, #d6eeff 70%, #e8f5ff 100%);
+  background: #ffffff;
   min-height: 100vh;
 }
 body.page-bg section,
@@ -48,19 +47,17 @@ body.page-bg .article-section {
   background: transparent !important;
 }
 body.page-bg .bg-light {
-  background: rgba(160, 210, 255, 0.3) !important;
+  background: #f8fafc !important;
 }
 
-/* Hero stays completely untouched */
 body.page-bg .hero {
   background: #ffffff !important;
 }
 
-/* Home page — directly style sections below hero (reliable on all mobile browsers) */
-#skills    { background: linear-gradient(180deg, #dff0ff 0%, #c8e6ff 100%); position: relative; overflow: hidden; }
-#featured  { background: linear-gradient(180deg, #c8e6ff 0%, #d8eeff 100%); position: relative; overflow: hidden; }
-#blog      { background: linear-gradient(180deg, #d4ecff 0%, #bfe0ff 100%); position: relative; overflow: hidden; }
-#contact   { background: linear-gradient(180deg, #c2dfff 0%, #d4ecff 100%) !important; position: relative; overflow: hidden; }
+#skills    { background: #ffffff; position: relative; overflow: hidden; }
+#featured  { background: #ffffff; position: relative; overflow: hidden; }
+#blog      { background: #f8fafc; position: relative; overflow: hidden; }
+#contact   { background: #ffffff !important; position: relative; overflow: hidden; }
 
 /* Colourful blob decorations in each section */
 #skills::before {
@@ -383,7 +380,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #0EA5E9;
-  background: #E0F2FE;
+  background: #f1f5f9;
   padding: 6px 14px;
   border-radius: 50px;
   margin-bottom: 22px;
@@ -727,9 +724,41 @@ img { max-width: 100%; display: block; }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 56px;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 36px;
   align-items: start;
+}
+
+/* 3-column row for Email / WhatsApp / Response */
+.contact-items-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.contact-item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 16px 10px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e8edf3;
+}
+.contact-item-card h4 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin: 0;
+}
+.contact-item-card a,
+.contact-item-card span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .contact-item {
@@ -739,8 +768,8 @@ img { max-width: 100%; display: block; }
   margin-bottom: 28px;
 }
 .contact-icon-wrap {
-  width: 52px; height: 52px;
-  border-radius: 14px;
+  width: 42px; height: 42px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -834,13 +863,13 @@ img { max-width: 100%; display: block; }
 /* ===== FORM ===== */
 .contact-form {
   background: var(--white);
-  padding: 40px;
+  padding: 24px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .form-group label {
