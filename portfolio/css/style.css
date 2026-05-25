@@ -935,16 +935,21 @@ img { max-width: 100%; display: block; }
 
 /* ===== PAGE HEADER ===== */
 .page-header {
-  background: linear-gradient(135deg, var(--dark) 0%, var(--dark2) 100%);
+  background: linear-gradient(160deg, #F472B6 0%, #38BDF8 52%, #ffffff 100%);
   padding: 140px 0 80px;
   text-align: center;
 }
-.page-header .section-label { margin-bottom: 10px; }
+.page-header .section-label {
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.18);
+}
 .page-header h1 {
   font-size: clamp(2rem, 6vw, 3.6rem);
   font-weight: 800;
-  color: var(--white);
+  color: #fff;
   line-height: 1.1;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.18);
 }
 
 /* ===== ABOUT ===== */
