@@ -327,7 +327,7 @@ img { max-width: 100%; display: block; }
   line-height: 1;
   margin-top: 1px;
 }
-.hamburger span {
+.hamburger span:not(.menu-label) {
   display: block;
   width: 24px; height: 2px;
   background: #0EA5E9;
