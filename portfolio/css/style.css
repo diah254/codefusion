@@ -935,68 +935,15 @@ img { max-width: 100%; display: block; }
 
 /* ===== PAGE HEADER ===== */
 .page-header {
-  background-color: #0a0f1e;
-  background-image: linear-gradient(rgba(5,10,25,0.62), rgba(5,10,25,0.62)),
-                    url('https://picsum.photos/seed/code/1400/600');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark2) 100%);
   padding: 140px 0 80px;
   text-align: center;
 }
-.page-header.header-about {
-  background-image: linear-gradient(rgba(5,10,25,0.55), rgba(5,10,25,0.55)),
-                    url('https://picsum.photos/seed/developer/1400/600');
-}
-.page-header.header-projects {
-  background-image: linear-gradient(rgba(5,10,25,0.55), rgba(5,10,25,0.55)),
-                    url('https://picsum.photos/seed/projects/1400/600');
-}
-.page-header.header-blog {
-  background-image: linear-gradient(rgba(5,10,25,0.55), rgba(5,10,25,0.55)),
-                    url('https://picsum.photos/seed/writing/1400/600');
-}
-.page-header.header-ai-tools {
-  background-image: linear-gradient(rgba(5,10,25,0.55), rgba(5,10,25,0.55)),
-                    url('https://picsum.photos/seed/aitools/1400/600');
-}
-.page-header.header-cloud-deploy {
-  background-image: linear-gradient(rgba(5,10,25,0.55), rgba(5,10,25,0.55)),
-                    url('https://picsum.photos/seed/cloud/1400/600');
-}
-.page-header.header-codefusion-story {
-  background-image: linear-gradient(rgba(5,10,25,0.55), rgba(5,10,25,0.55)),
-                    url('https://picsum.photos/seed/startup/1400/600');
-}
-.page-header.header-cyber-security {
-  background-image: linear-gradient(rgba(5,10,25,0.60), rgba(5,10,25,0.60)),
-                    url('https://picsum.photos/seed/security/1400/600');
-}
-.page-header.header-mobile-first {
-  background-image: linear-gradient(rgba(5,10,25,0.55), rgba(5,10,25,0.55)),
-                    url('https://picsum.photos/seed/mobile/1400/600');
-}
-.page-header.header-rest-graphql {
-  background-image: linear-gradient(rgba(5,10,25,0.55), rgba(5,10,25,0.55)),
-                    url('https://picsum.photos/seed/api/1400/600');
-}
-.page-header.header-scalable-web {
-  background-image: linear-gradient(rgba(5,10,25,0.55), rgba(5,10,25,0.55)),
-                    url('https://picsum.photos/seed/webscale/1400/600');
-}
-.page-header.header-ux-principles {
-  background-image: linear-gradient(rgba(5,10,25,0.55), rgba(5,10,25,0.55)),
-                    url('https://picsum.photos/seed/design/1400/600');
-}
-.page-header .section-label {
-  margin-bottom: 10px;
-  color: #fff !important;
-}
+.page-header .section-label { margin-bottom: 10px; }
 .page-header h1 {
   font-size: clamp(2rem, 6vw, 3.6rem);
   font-weight: 800;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
+  color: var(--white);
   line-height: 1.1;
 }
 
